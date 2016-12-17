@@ -1,0 +1,33 @@
+
+/*与公共差别的地地方*/
+.banner_left{display: none;}
+
+
+/*main_con*/
+#main{height: 488px;border-bottom: 40px solid #fff;}
+.main_con{height: 426px;width: 1120px;margin: 0 auto;padding-top:62px;padding-left: 80px;}
+.main_con_left{width: 640px;height: 360px;float: left;}
+.main_con_right{width: 400px;height: 360px;background: #fff;float: left;position: relative;}
+.main_con_right1{width: 310px;height: 44px;padding-left: 90px;padding-top: 28px;}
+.main_con_right1 p{float: left;font-size: 18px;line-height: 18px;color:#666;cursor: pointer;}
+.main_con_right1 .phone{color: #666666;}
+.main_con_right2{width: 400px;height: 142px;}
+.huiy_log{width: 310px;height: 142px;position: absolute;top:0px,left:0;
+padding-left: 90px;display: block;}
+.phone_log{width: 310px;height: 142px;position: absolute;top:0px,left:0;padding-left: 90px; display: none;}
+.username{width: 215px;border: 1px solid #bdbdbd;border-radius: 2px;height: 31px;background: url(../img/username.gif) no-repeat;top:1px;left: 1px;padding-left: 40px;}
+.passward{width: 215px;border: 1px solid #bdbdbd;border-radius: 2px;height: 31px;background: url(../img/username.gif) no-repeat;top:1px;left: 1px;padding-left: 40px;margin-top: 18px;}
+.huiy_log p{width: 257px;height: 34px;background: #ce171f;color: #fff;font-size:13px;text-align: center;line-height: 34px;margin-top: 18px;}
+.phone_log .p1{width: 130px ;height: 34px;background: #ce171f;color: #fff;font-size:13px;text-align: center;line-height: 34px;margin-top: 18px;float: left;}
+.phone_log .p2{width: 100px ;height: 34px;background: #ce171f;color: #fff;font-size:13px;text-align: center;line-height: 34px;margin-top: 18px;float: left;margin-left: 27px;}
+.main_con_right3{width: 310px;height: 130px;padding-left: 90px;padding-top: 20px;}
+.main_con_right3 div{width: 257px;height: 25px;border-bottom: 1px solid #bdbdbd;font-size: 12px;color: red;}
+.main_con_right3 div input{height: 12px;}
+.main_con_right3 div p{float: right;font-size: 10px;margin-top: 5px;}
+.main_con_right3 div a{color: #666666;}
+.main_con_right3 div a:hover{color: red;}
+.main_con_right3 div .p2{color: #666666;}
+.main_con_right3 .a3{color: red;}
+
+.main_con_right3 .p4{font-size: 12px;color: #7a7a7a;margin-top: 16px;margin-bottom: 12px;}
+.main_con_right3 .p5 a{float: left;margin-right: 8px;}

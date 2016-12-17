@@ -1,0 +1,31 @@
+/*与公共差别的地地方*/
+.banner_left{display: none;}
+#main{height: 800px;border-bottom: 40px solid #fff;background:url(../img/shuimo.jpg) no-repeat 50%}
+.mainCon{height: 740px;width: 1090px;padding-top: 60px;padding-left: 110px;margin: 0 auto;}
+.sign_box{width: 960px;height: 630px;background: #fff;}
+.sign_box1{width: 870px;padding-left: 90px;height: 80px;padding-top: 20px;}
+.sign_box1 h2{font-size: 20px;color: #ce1b15;font-weight: 600;}
+.sign_box2{height: 360px;}
+.username{height: 38px;margin-bottom: 29px;}
+.passward{height: 38px;margin-bottom: 10px;}
+.re_passward{height: 38px;margin-bottom: 21px;}
+.email{height: 38px;margin-bottom: 21px;}
+.birthday{height: 38px;margin-bottom: 21px;}
+.sign_box2 b{display: block;width: 220px;text-align: right;font-size: 14px;color: #909090;line-height: 38px;height: 38px;float: left;}
+.sign_box2 input{width: 315px;height: 36px;border: 1px solid #e9e9e9;float: left;margin-left: 8px;}
+.sign_box2 span{display:block; width: 160px;height: 38px;line-height: 38px;color: red;font-size: 12px;text-align: left;float: left; blue;margin-left: 10px;}
+.passward_qd{width:170px;height: 13px; margin-left: 300px;margin-bottom: 20px;height: 12px;}
+.passward_qd h3{font-size: 12px;color:#909090 ;width: 62px;float: left;}
+.passward_qd .cha{width: 34px;height: 13px;float: left;font-size: 12px;color: 909090;text-align: center;line-height: 13px;}
+.passward_qd .zhong{width: 34px;height: 13px;float: left;margin: 0 2px;font-size: 12px;color: 909090;text-align: center;line-height: 13px;}
+.passward_qd .qiang{width: 34px;height: 13px;float: left;font-size: 12px;color: 909090;text-align: center;line-height: 13px;}
+.birthday select{width: 78px;height: 28px;border: 1px solid #e9e9e9;margin-top: 4px;margin-left: 8px;}
+.yanzhengma{height: 38px;margin-bottom: 20px;}
+.yanzhengma .yanzhengma_ipt{width: 100px;}
+.suiji_yzm{width: 100px;height: 36px;margin-top: 1px;background: forestgreen;float: left;margin-left: 10px;text-align: center;line-height: 36px;font-size: 18px;color: #fff;}
+.agree{height: 14px;margin-bottom: 42px;}
+.sign{height: 40px;}
+.agree .agree_ipt{height: 14px;width: 14px;}
+.agree h5{height: 14px;float: left;font-size: 14px;color: black;}
+.agree h6{float: left;color: #005aa0;font-size: 14px;}
+.sign .sign_ipt{height: 40px;background: #ed4c4f;color: #fff;font-weight: 600;font-size: 15px;}

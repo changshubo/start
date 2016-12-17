@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>华致陈香-老酒频道-白酒、老酒、葡萄酒、啤酒官方商城-品华致美酒、享健康人生</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--整个网页两边的侧栏-->
+		<div id="side_left">
+			<ul>
+				<li class="F1_side"></li>
+				<li class="F2_side"></li>
+				<li class="F3_side"></li>
+				<li class="F4_side"></li>
+			</ul>
+		</div>
+		<!--左边鼠标划入的动画-->
+		<script>
+			$(window).ready(function(){
+				//当滚动条到某位置
+				window.onscroll=function(){
+					var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
+						console.log(scrollTop)
+					if(scrollTop<=1300){
+						$("#side_left").css({
+							display:"none"
+						})
+					}
+						
+					if(scrollTop>=1300&&scrollTop<=2500){
+						$("#side_left").css({
+							display:"block"
+						})
+						$(".F1_side").html("F1");
+						$(".F1_side").css({
+							background:"#9B1CEB"
+						})
+						$(".F2_side").html(null);
+						$(".F2_side").css({
+							background:"url(img/05.png) no-repeat 4.5px 0"
+						})
+						$(".F3_side").html(null);
+						$(".F3_side").css({
+							background:"url(img/05.png) no-repeat 4.5px 0"
+						})
+					}
+					if(scrollTop>=2500 && scrollTop<=3600){
+						$(".F1_side").html(null);
+						$(".F1_side").css({
+							background:"url(img/05.png) no-repeat 4.5px 0"
+						})
+						$(".F3_side").html(null);
+						$(".F3_side").css({
+							background:"url(img/05.png) no-repeat 4.5px 0"
+						})
+						$(".F2_side").html("F2");
+						$(".F2_side").css({
+							background:"#AF0015"
+						})
+						
+					}
+					if(scrollTop>=3600 ){
+						$(".F1_side").html(null);
+						$(".F1_side").css({
+							background:"url(img/05.png) no-repeat 4.5px 0"
+						})
+						$(".F2_side").html(null);
+						$(".F2_side").css({
+							background:"url(img/05.png) no-repeat 4.5px 0"
+						})
+						$(".F3_side").html("F3");
+						$(".F3_side").css({
+							background:"#C17931"
+						})
+					}
+				}
+				
+				
+				//当鼠标滑入时/
+				$(".F1_side").mouseenter(function(){
+					$(".F1_side").css({
+						background:"#9B1CEB"
+						
+					})
+					$(".F1_side").animate({
+						width:100
+					});
+					$(".F1_side").html("老酒馆");
+				})
+				$(".F1_side").mouseleave(function(){
+					$(".F1_side").animate({
+						width:30
+					});
+					$(".F1_side").html("F1");
+				})
+				
+				$(".F2_side").mouseenter(function(){
+					$(".F2_side").css({
+						background:"#AF0015"
+						
+					})
+					$(".F2_side").animate({
+						width:100
+					});
+					$(".F2_side").html("白酒馆");
+				})
+				$(".F2_side").mouseleave(function(){
+					$(".F2_side").animate({
+						width:30
+					});
+					$(".F2_side").html("F2");
+				})
+				$(".F3_side").mouseenter(function(){
+					$(".F3_side").css({
+						background:"#C17931"
+						
+					})
+					$(".F3_side").animate({
+						width:100
+					});
+					$(".F3_side").html("葡萄酒馆");
+				})
+				$(".F3_side").mouseleave(function(){
+					$(".F3_side").animate({
+						width:30
+					});
+					$(".F3_side").html("F3");
+				})
+				
+				//当鼠标点击时，跳转到相应楼层
+				$(".F1_side").click(function(){
+					
+				document.body.scrollTop =document.documentElement.scrollTop=1690;
+				})
+				$(".F2_side").click(function(){
+					document.body.scrollTop =document.documentElement.scrollTop=2830;
+				})
+				$(".F3_side").click(function(){
+					document.body.scrollTop =document.documentElement.scrollTop=3970;
+				})
+				$(".F4_side").click(function(){
+					document.body.scrollTop =document.documentElement.scrollTop=0;
+				})
+			})
+		</script>
+		
+		<div id="side_right">
+			
+			<div class="side_right1">
+				我
+			</div>
+			<div class="div_wo">
+				<div class="div_wo1">
+					<p>您好!请<a href="">&nbsp;登录</a></p>
+				</div>
+				<div class="div_wo2">
+					<a href=""><p>我的订单</p></a>
+					<a href=""><p>我的订单</p></a>
+				</div>
+				<div class="div_wo3">
+					<a href=""><p>我的订单</p></a>
+					<a href=""><p>我的订单</p></a>
+				</div>
+			</div>
+			<div class="side_right2">
+				收藏
+			</div>
+			<div class="div_shoucang">
+				<p>您好!请 &nbsp;<a href="">登录</a></p>
+			</div>
+			<div class="side_right3" isDisplay="ture">
+				购物车
+				
+			</div>
+			<div class="div_gouwuche">
+				<div class="div1">
+					购物车
+				</div>
+				<p class="p1">您还未选中任何商品，快去商店里面选购吧！</p>
+			</div>
+		</div>
+		<!--右边鼠标滑入时的动画-->
+		<script type="text/javascript">
+			$(window).ready(function(){
+				$(".side_right1").mouseenter(function(){
+					$(".div_wo").css("display","block");
+					$(".side_right1")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".side_right1").mouseleave(function(){
+					$(".div_wo").css("display","none");
+					$(".side_right1")[0].style.background="#fff url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".div_wo").mouseenter(function(){
+					$(".div_wo").css("display","block");
+					$(".side_right1")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".div_wo").mouseleave(function(){
+					$(".div_wo").css("display","none");
+					$(".side_right1")[0].style.background="#fff url(img/1.png) no-repeat 8px 12px"
+				})
+				
+				$(".side_right2").mouseenter(function(){
+					$(".div_shoucang").css("display","block");
+					$(".side_right2")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".side_right2").mouseleave(function(){
+					$(".div_shoucang").css("display","none");
+					$(".side_right2")[0].style.background="#fff url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".div_shoucang").mouseenter(function(){
+					$(".div_shoucang").css("display","block");
+					$(".side_right2")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".div_shoucang").mouseleave(function(){
+					$(".div_shoucang").css("display","none");
+					$(".side_right2")[0].style.background="#fff url(img/1.png) no-repeat 8px 12px"
+				})
+				
+				
+				var x=$(".side_right3")[0].getAttribute("isDisplay");
+				$(".side_right3").mouseenter(function(){
+					$(".side_right3")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+				})
+				$(".side_right3").mouseleave(function(){
+					if(x){
+						$(".side_right3")[0].style.background="#fff url(img/1.png) no-repeat 8px 12px"
+					}
+				})
+					
+					
+				
+				$(".div_gouwuche").mouseenter(function(){
+					$(".side_right3")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+				})
+				
+				
+				$(".side_right3").click(function(){
+					if(x){
+						$(".div_gouwuche").css("display","block");
+						$(".side_right3")[0].style.background="#BB1927 url(img/1.png) no-repeat 8px 12px"
+						x=!x;
+					}else{
+						$(".div_gouwuche").css("display","none");
+						x=!x;
+					}
+					
+				})
+			})
+		</script>
+		
+	<!--整个网页的最顶部-->
+	<!--top-->
+		
+		<div id="top">
+			<div class="top_left">
+				<a class="log_on" href="">Hi 请登录</a>
+				<a class="register" href="">免费注册</a>
+			</div>
+			<div class="top_right">
+				<ul class="top_nav">
+					<li><a class="top_nav_a1" href="">会员中心</a></li>
+					<li><a href="">我的订单</a></li>
+					<li>
+						<a href="">关于我们</a>
+					</li>
+					<li class="li33">
+						<a class="top_nav_phone" href="">_手机逛华致_</a>
+						<div class="two_wei_ma1"><img width="78"  height="78" src="img/fxshangcheng.jpg"/></div>
+					</li>
+					<li class="li44">
+						<a class="top_nav_store" href="">分消商城</a>
+						<div class="two_wei_ma2"><img width="78"  height="78" src="img/fxshangcheng.jpg"/></div>
+					</li>
+					
+				<!--划入显示二维码-->
+					<script type="text/javascript">
+						$(window).ready(function(){
+							$(".li33").mouseenter(function(){
+								$(".two_wei_ma1").css({
+									display:"block"
+								})
+							})
+							$(".li33").mouseleave(function(){
+								$(".two_wei_ma1").css({
+									display:"none"
+								})
+							})
+							$(".li44").mouseenter(function(){
+								$(".two_wei_ma2").css({
+									display:"block"
+								})
+							})
+							$(".li44").mouseleave(function(){
+								$(".two_wei_ma2").css({
+									display:"none"
+								})
+							})
+						})
+					</script>
+					
+					<li><a class="top_nav_car" href="">购物车(<span>0</span>)</a></li>
+					<img class="qq" src="img/qq.gif" alt="" />
+					<p class="tele">客服电话&nbsp;<span>400-118-5919</span></p>
+				</ul>
+			</div>
+		</div>
+	<!--logo-->
+		<div id="logo">
+			<div class="logo_left1">
+				<a href=""><img src="img/logo.png"/></a>
+			</div>
+			<div class="logo_left2">
+				<img src="img/1480058220415459342.gif">
+			</div>
+			<div class="logo_right1">
+				<input class="ipt" type="text"  placeholder="|"/>
+				<input class="search" type="text"  value="搜索"/>
+				<ul class="logo_nav">
+					<li ><a class="a1" href="">茅台</a></li>
+					<li ><a href="">五浪液</a></li>
+					<li ><a class="a3" href="">泸州老窖</a></li>
+					<li ><a href="">汾酒</a></li>
+					<li ><a href="">洋河</a></li>
+					<li ><a href="">古井贡</a></li>
+					<li ><a class="a7" href="">牛栏山</a></li>
+				</ul>
+			</div>
+			<div class="logo_right2">
+				<ul class="logo_erweima">
+					<li><img src="img/fxshangcheng.jpg" width="70" height="70" /></li>
+					<li>
+						<dl>
+							<dt><img src="img/logo_erweima1.gif" alt="" /></dt>
+							<dd>专家评分</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="img/logo_erweima2.gif" alt="" /></dt>
+							<dd>酒协会认证</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="img/logo_erweima3.gif" alt="" /></dt>
+							<dd>检测实验室</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="img/logoerweima3.gif" alt="" /></dt>
+							<dd>100%老酒</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="img/logoerweima3.gif" alt="" /></dt>
+							<dd>中国人保</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	<!--nav-->
+		<div id="nav">
+			<div id="nav_con">
+				<ul class="nav_nav">
+					<li class="li1">全部商品分类</li>
+					<li class="li"><a href="">首页</a></li>
+					<li class="li"><a href="">在线拍卖</a></li>
+					<li class="li"><a href="">老酒估值</a></li>
+					<li class="li"><a href="">我要寄卖</a></li>
+					<li class="li"><a href="">限时秒杀</a></li>
+					<li class="li"><a href="">众筹团购</a></li>
+					<li class="li"><a href="">酒道会馆</a></li>
+					<li class="li"><a href="">收藏级陈酒</a></li>
+					<li class="li10"><img src="img/jue.png"/></li>
+					
+				</ul>
+				<div class="banner_left">
+					<ul class="main_menu">
+						<li class="item_menu">
+							<h2 class="main_menu_h2a"><a href="">一键选酒</a></h2>
+							<p><a href="">超值套装</a></p>
+							<p><a href="">婚宴喜庆</a></p>
+							<p><a href="">特色定制</a></p>
+							<p><a href="">礼盒专场</a></p>
+							<p><a href="">99元集市</a></p>
+							<p><a href="">名酒推介</a></p>
+						</li>
+					</ul>
+					<ul class="main_menu">
+						<li class="item_menu">
+							<h2 class="main_menu_h2b"><a href="">名优白酒</a></h2>
+							<p><a href="">剑南春</a></p>
+							<p><a href="">茅台</a></p>
+							<p><a href="">西凤</a></p>    
+							
+							
+							
+				 			
+							   
+							<p><a href="">泸州老窖</a></p>
+							<p><a href="">古井贡</a></p>
+							<p><a href="">汾酒</a></p>
+							<p><a href="">郎酒</a></p>
+							<p><a href="">董酒</a></p>
+						</li>
+					</ul>
+					<ul class="main_menu">
+						<li class="item_menu">
+							<h2 class="main_menu_h2c"><a href="">年代键</a></h2>
+							<p><a href="">80年代</a></p>
+							<p><a href="">90年代</a></p>
+							<p><a href="">2000~2009年</a></p>
+							<p class="p_2010"><a  href="">2010年至今</a></p>
+						</li>
+					</ul>
+					<ul class="main_menu">
+						<li class="item_menu">
+							<h2 class="main_menu_h2d"><a href="">葡萄酒</a></h2>
+							<p><a href="">红葡萄酒</a></p>
+							<p><a href="">白葡萄酒</a></p>
+							<p><a href="">起泡酒</a></p>
+							<p><a href="">桃红葡萄酒</a></p>
+							<p><a href="">阿伦选</a></p>
+							<p><a href="">香格里拉</a></p>
+						</li>
+					</ul>
+					<ul class="main_menu">
+						<li class="item_menu">
+							<h2 class="main_menu_h2e"><a href="">价位</a></h2>
+							<p><a href="">0-99</a></p>
+							<p><a href="">100-199</a></p>
+							<p><a href="">200-299</a></p>
+							<p><a href="">300-399</a></p>
+							<p><a href="">500-999</a></p>
+							<p><a href="">1000-4999</a></p>
+						</li>
+					</ul>
+					<!--二级菜单-->
+		<!--第一个-->
+				<div class="main_item1">
+					<div class="main_item1_left">
+						<div class="main_item1_left1">
+							<div>
+								<h3><a href="">品牌</a></h3>
+							</div>
+							<ul>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								<li><a href="">五粮液</a></li>
+								
+							</ul>
+						</div>
+						<div class="main_item1_left1 main_item1_left2">
+							<div>
+								<h3><a href="">香型</a></h3>
+							</div>
+							<ul>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="main_item1_right">
+						<div class="main_item1_left1 main_item1_right1">
+							<div>
+								<h3><a href="">香型</a></h3>
+							</div>
+							<ul>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+								<li><a href="">酱香型</a></li>
+							</ul>
+						</div>
+						<div class="main_item1_left1 main_item1_right2">
+							<div>
+								<h3><a href="">年代</a></h3>
+							</div>
+							<ul>
+								<li><a href="">80年代</a></li>
+								<li><a href="">80年代</a></li>
+								<li><a href="">80年代</a></li>
+								<li><a href="">80年代</a></li>
+							</ul>
+						</div>
+						<div class="main_item1_left1 main_item1_right3">
+							<div>
+								<h3><a href="">净含量</a></h3>
+							</div>
+							<ul>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+								<li><a href="">500ml</a></li>
+							</ul>
+						</div>
+						<div class="main_item1_left1 main_item1_right4">
+							<div>
+								<h3><a href="">价位</a></h3>
+							</div>
+							<ul>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-500</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		<!--第二个-->		
+				<div class="main_item2">
+					<div class="main_item2_con">
+							<div>
+								<h3><a href="">名优白酒</a></h3>
+							</div>
+							<ul>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+								<li><a href="">剑南春</a></li>
+							</ul>
+						</div>
+				</div>
+		<!--第三个-->
+				<div class="main_item3">
+					<div class="main_item3_con">
+							<div>
+								<h3><a href="">年份</a></h3>
+							</div>
+							<ul>
+								<li><a href="">80年代</a></li>
+								<li><a href="">90年代</a></li>
+								<li><a href="">00年代</a></li>
+								<li><a href="">80年代</a></li>
+								<li><a href="">80年代</a></li>
+							</ul>
+						</div>
+				</div>
+		<!--第四个-->
+				<div class="main_item4">
+					<div class="main_item4_con">
+							<div>
+								<h3><a href="">葡萄酒</a></h3>
+							</div>
+							<ul>
+								<li><a href="">红葡萄酒</a></li>
+								<li><a href="">红葡萄酒</a></li>
+								<li><a href="">红葡萄酒</a></li>
+								<li><a href="">红葡萄酒</a></li>
+								<li><a href="">红葡萄酒</a></li>
+							</ul>
+						</div>
+				</div>
+		<!--第五个-->
+				<div class="main_item5">
+					<div class="main_item5_con">
+							<div>
+								<h3><a href="">价位</a></h3>
+							</div>
+							<ul>
+								<li><a href="">100-500</a></li>
+								<li><a href="">100-200</a></li>
+								<li><a href="">500-1000</a></li>
+								<li><a href="">1000-5000</a></li>
+								<li><a href="">5000以上</a></li>
+								
+							</ul>
+						</div>
+				</div>
+	<!--二级菜单的操作-->
+	<script type="text/javascript">
+		$(window).ready(function(){
+			$(".main_menu:eq(0)").mouseenter(function(){
+				$(".main_item1").css("display","block");
+			})
+			$(".main_menu:eq(0)").mouseleave(function(){
+				$(".main_item1").css("display","none");
+			})
+			$(".main_item1").mouseenter(function(){
+				$(".main_item1").css("display","block");
+			})
+			$(".main_item1").mouseleave(function(){
+				$(".main_item1").css("display","none");
+			})
+			
+			$(".main_menu:eq(1)").mouseenter(function(){
+				$(".main_item2").css("display","block");
+			})
+			$(".main_menu:eq(1)").mouseleave(function(){
+				$(".main_item2").css("display","none");
+			})
+			$(".main_item2").mouseenter(function(){
+				$(".main_item2").css("display","block");
+			})
+			$(".main_item2").mouseleave(function(){
+				$(".main_item2").css("display","none");
+			})
+			
+			$(".main_menu:eq(2)").mouseenter(function(){
+				$(".main_item3").css("display","block");
+			})
+			$(".main_menu:eq(2)").mouseleave(function(){
+				$(".main_item3").css("display","none");
+			})
+			$(".main_item3").mouseenter(function(){
+				$(".main_item3").css("display","block");
+			})
+			$(".main_item3").mouseleave(function(){
+				$(".main_item3").css("display","none");
+			})
+			
+			$(".main_menu:eq(3)").mouseenter(function(){
+				$(".main_item4").css("display","block");
+			})
+			$(".main_menu:eq(3)").mouseleave(function(){
+				$(".main_item4").css("display","none");
+			})
+			$(".main_item4").mouseenter(function(){
+				$(".main_item4").css("display","block");
+			})
+			$(".main_item4").mouseleave(function(){
+				$(".main_item4").css("display","none");
+			})
+			
+			$(".main_menu:eq(4)").mouseenter(function(){
+				$(".main_item5").css("display","block");
+			})
+			$(".main_menu:eq(4)").mouseleave(function(){
+				$(".main_item5").css("display","none");
+			})
+			$(".main_item5").mouseenter(function(){
+				$(".main_item5").css("display","block");
+			})
+			$(".main_item5").mouseleave(function(){
+				$(".main_item5").css("display","none");
+			})
+		})
+	</script>
+				</div>
+	
+				
+				<div class="banner_right">
+					<div class="banner_right_main">
+						<a href=""> <img height="100%" src="img/1481161755755037122.jpg"/></a>
+						
+					</div>
+					<div class="banner_right_main">
+						<img height="100%" src="img/1481161144744356885.jpg"/>
+					</div>
+					<div class="banner_right_main">
+						<img height="100%" src="img/1481161666089124069.jpg"/>
+					</div>
+						
+				</div>
+		
+				
+			</div>
+		</div>
+	<!--banner-->
+		<div id="banner">
+			<div class="banner_con">
+				<ul class="banner_img_ul">
+					<li class="banner_img_li1"><a href=""></a></li>
+					<li class="banner_img_li2"><a href=""></a></li>
+					<li class="banner_img_li3"><a href=""></a></li>
+					<li class="banner_img_li4"><a href=""></a></li>
+					<li class="banner_img_li5"><a href=""></a></li>
+					<li class="banner_img_li6"><a href=""></a></li>
+			
+				</ul>
+				<div class="ball_box">
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+					</ul>
+				</div>
+				
+			</div>
+		
+		
+		
+		<!--轮播图效果-->
+		<script type="text/javascript">
+			$(window).ready(function(){
+				var banner_img_ul=$(".banner_img_ul")[0];
+				var liList=banner_img_ul.children;
+				var liList1=$(".ball_box")[0].children[0].children;
+				var z=0;
+				setInterval(function(){
+					z++;
+					for(var i=0;i<liList.length;i++){
+						$(liList[i]).css({
+							opacity:0,
+							zIndex:0
+						});
+					}
+					for(var m=0;m<liList1.length;m++){
+						liList1[m].style.background="#222";
+					}
+					liList1[z].style.background="#a70703";
+					
+					$(liList[z]).animate({
+							opacity:1,
+							zIndex:1
+							});
+					
+					if(z==5){
+						z=-1;
+					}
+				},3000)
+				
+				for(var j=0;j<liList1.length;j++){
+					$(liList1[j]).mouseenter(function(){
+						
+						var this_index=this.innerHTML-1;
+						z=this_index;
+						if (z==5){
+							z=4;
+						}
+						//直接写z=this_index；当z=5时存在bug；
+						//但是写成这个的时候，也有问题，
+						//所以......未解决
+						for(var k=0;k<liList1.length;k++){
+							liList1[k].style.background="#222";
+						}
+						
+						this.style.background="#a70703";
+						for(var i=0;i<liList.length;i++){
+							$(liList[i]).css({
+							opacity:0,
+							zIndex:0
+							});
+						}
+						$(liList[this_index]).animate({
+							opacity:1,
+							zIndex:1
+							});
+						
+					})
+				}
+			})
+		</script>
+				
+				
+		</div>
+		
+	<!--show-->
+		<div id="show">
+			<div class="one_price">
+				<div class="one_price_up">
+					<ul>
+						<li>
+							<a href=""><img  class="easy_lb1" src="img/1474698684741007930.jpg"/></a>
+							<a href=""><img class="easy_lb2"  src="img/1474698728528245528.jpg"/></a>
+						</li>
+							
+							
+					<!--简单的图片轮播-->	
+						<script type="text/javascript">
+							window.onload=function(){
+								var isLuobo="ture";
+								var easy_lb1_list=$($(".easy_lb1" ));
+								var easy_lb2_list=$($(".easy_lb2" ));
+								setInterval(function(){
+									
+										if(isLuobo){
+											$(".easy_lb1").css("display","none");
+											$(".easy_lb2").css("display","block");
+											isLuobo=!isLuobo;
+										}else{
+											$(".easy_lb1").css("display","block");
+											$(".easy_lb2").css("display","none");
+											isLuobo=!isLuobo;;
+										}
+									
+								},3000)
+								
+								
+							}
+						</script>
+						
+						<li>
+							
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/638_thumb_g_1471596210294.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3> <a href="">2009年 四特 老窖酒 45度500ml</a></h3>
+									<h4>￥68.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li>
+							
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/695_thumb_g_1472621145902.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">2010年 古井贡酒 50度 500ml</a> </h3>
+									<h4>￥69.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li>
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/829_thumb_g_1480926915307.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">汾酒集团53度清香古酿1500ml</a></h3>
+									<h4>￥189.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li>
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/834_thumb_g_1480927096493.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">53度酱香型舒心酱酒酱道500ml</a></h3>
+									<h4>￥4.90</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li >
+							<a href=""><img src="img/1474703193896132335.jpg"/></a>
+						</li>
+						<li>
+							<a href=""><img  class="easy_lb1" src="img/1474715559900156918.jpg"/></a>
+							<a href=""><img class="easy_lb2" src="img/1474715585795914093.jpg"/></a>
+						</li>
+						<li>
+							
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/119_thumb_g_1481019750908.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">1993 宋河粮液 54度 500ml</a></h3>
+									<h4>￥390.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li>
+							
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/179_thumb_g_1481020065114.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">1991 卢湖 44度 500ml</a></h3>
+									<h4>￥1.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li>
+							
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/122_thumb_g_1481020184939.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">1995 郎酒 53度 500ml</a></h3>
+									<h4>￥550.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li>
+							
+							<dl class="one_price_up1">
+								<dt><a href=""><img src="img/82_thumb_g_1481020205940.jpg" width="100%" height="176px"/></a></dt>
+								<dd>
+									<h3><a href="">80年代 汾酒(玻璃瓶)60度 500ml</a></h3>
+									<h4>￥1.00</h4>
+								</dd>
+							</dl>
+							<img class="no_start" src="img/08.png" alt="" />
+						</li>
+						<li><a href=""><img src="img/1474703214037098854.jpg"></a></li>
+					</ul>
+					
+				</div>
+				<div class="one_price_down">
+					<div class="one_price_down_left">
+						<div class="one_price_down_nav">
+							<ul>
+								<li><a  class="a1" >热卖商品</a></li>
+								<li><a href="">推介商品</a></li>
+								<li><a href="">整箱特惠</a></li>
+								<li><a href="">新品上架</a></li>
+							</ul>
+						</div>
+						<div class="one_price_down_con">
+							<ul>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/294_thumb_g_1446099545233.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">剑南春 金剑南k6 50度500ml</a></h3>
+											<h4>￥181.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/514_thumb_g_1459295001300.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2014 十年红花郎酒 53度 500ml</a></h3>
+											<h4>￥269.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/525_thumb_g_1459381226143.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2015 洋河 蓝色金典 天之蓝</a></h3>
+											<h4>￥338.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/432_thumb_g_1453997883258.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">红星二锅头 (苏式扁瓶 )45度</a></h3>
+											<h4>￥39.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/361_thumb_g_1451411864700.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">62°衡水老白干玻璃绿标500ml</a></h3>
+											<h4>￥30.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/362_thumb_g_1451412265741.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2015年 衡水老白干40° 大青花</a></h3>
+											<h4>￥119.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/363_thumb_g_1451412909103.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2015年 衡水老白干41° 小青花</a></h3>
+											<h4>￥30.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/695_thumb_g_1472621145902.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2010年 古井贡酒 50° 500ml</a></h3>
+											<h4>￥69.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/482_thumb_g_1459124452154.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2014年 郎酒 53° 国藏郎酒</a></h3>
+											<h4>￥264.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+								<li>
+							
+									<dl class="one_price_down1">
+										<dt><a href=""><img src="img/837_thumb_g_1481002379193.jpg" width="100%" height="185px"/></a></dt>
+										<dd>
+											<h3> <a href="">2016年 五粮液华彩人生 50° </a></h3>
+											<h4>￥229.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="one_price_down_right">
+						<div class="_inf">
+							<div >
+								<a href="">公告信息</a>
+								<a href="">促销信息</a>
+							</div>
+							<ul>
+								<li><a href="">寄卖说明</a></li>
+								<li><a href="">第五届评酒会“十月五日开幕”</a></li>
+								<li><a href="">第四届十三大名酒</a></li>
+								<li><a href="">老酒收藏!那些技巧</a></li>
+								<li><a href="">华致陈香接棒华致集团所有零售业务</a></li>
+								<li><a href="">华致陈香携手酒仙网共同打造中国一流酒类卖场</a></li>
+							</ul>
+							
+						</div>
+						<a href=""><img src="img/1474715532077420069.jpg"/></a>
+					</div>
+					
+				</div>
+			</div>
+			
+		<!--F1 一楼  老酒馆-->
+			<div class="F1">
+				<h6>老酒馆 <span><a href="">更多</a></span></h6>
+				<div class="F1_con">
+					<ul>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474697041578456372.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474621656132919114.jpg"/></a>
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/294_thumb_g_1446099545233.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">剑南春 金剑南k6 52度 500ml</a></h3>
+											<h4>￥182.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/514_thumb_g_1459295001300.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2014年 十年红花郎酒 53° 500ml</a></h3>
+											<h4>￥269.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/829_thumb_g_1480926915307.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">汾酒集团53度清香古酿1500ml 大坛</a></h3>
+											<h4>￥249.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/651_thumb_g_1472461157792.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">53d度 20年汾酒 475ml</a></h3>
+											<h4>￥369.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474697191124198620.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474621702288142665.jpg"/></a>
+							
+						</li>
+						
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/638_thumb_g_1471596210294.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2009年 四特 老窖酒 45度 450ml</a></h3>
+											<h4>￥88.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/539_thumb_g_1463047054056.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2008年 黄果树精品大曲 52度 250ml</a></h3>
+											<h4>￥50.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/534_thumb_g_1461575227963.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2012年茅台 53度+2008 五粮液</a></h3>
+											<h4>￥2288.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/573_thumb_g_1468576822670.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2009年 双洋大曲 45度 450ml</a></h3>
+											<h4>￥69.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474621730396970736.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474697099993405961.jpg"/></a>
+							
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/238_thumb_g_1442262102444.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1998年 茅台(白皮) 53度 500ml</a></h3>
+											<h4>￥6500.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/539_thumb_g_1463047054056.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1996 年 五粮液长城塑盖 52度 500ml</a></h3>
+											<h4>￥3500.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/238_thumb_g_1442262102444.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1999年 茅台(飞天牌白皮)53度 500ml</a></h3>
+											<h4>￥6000.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/532_thumb_g_1460247268138.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1999年茅台酒(五星牌) 53度 500ml</a></h3>
+											<h4>￥6000.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474701763903275484.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474697791044732188.jpg"/></a>
+							
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/82_thumb_g_1481020205940.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">80 年代 汾酒(玻璃瓶)60度 500ml</a></h3>
+											<h4>￥1300.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/92_thumb_g_1480656022061.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1999 年 汾酒(玻璃瓶)60度 500ml</a></h3>
+											<h4>￥899.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/736_thumb_g_1480663710584.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">80年代 西凤 凤凰牌 60度 500ml</a></h3>
+											<h4>￥4200.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/735_thumb_g_1474708502647.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">80年代 董酒 59度 500ml</a></h3>
+											<h4>￥3200.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--2楼 白酒馆-->
+			<div class="F2">
+				<h6>白酒馆 <span><a href=""> 喜宴用酒 送礼专用 更多</a></span></h6>
+				<div class="F2_con">
+					<ul>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474697766639433314.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474702000512792469.jpg"/></a>
+						</li>
+						
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/294_thumb_g_1446099545233.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">剑南春 金剑南k6 52度 500ml</a></h3>
+											<h4>￥182.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/514_thumb_g_1459295001300.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2014年 十年红花郎酒 53° 500ml</a></h3>
+											<h4>￥269.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/829_thumb_g_1480926915307.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">汾酒集团53度清香古酿1500ml 大坛</a></h3>
+											<h4>￥249.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/651_thumb_g_1472461157792.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">53d度 20年汾酒 475ml</a></h3>
+											<h4>￥369.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474697791044732188.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474702000512792469.jpg"/></a>
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/638_thumb_g_1471596210294.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2009年 四特 老窖酒 45度 450ml</a></h3>
+											<h4>￥88.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/539_thumb_g_1463047054056.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2008年 黄果树精品大曲 52度 250ml</a></h3>
+											<h4>￥50.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/534_thumb_g_1461575227963.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2012年茅台 53度+2008 五粮液</a></h3>
+											<h4>￥2288.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/573_thumb_g_1468576822670.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2009年 双洋大曲 45度 450ml</a></h3>
+											<h4>￥69.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/is_promote.png" alt="" />
+						</li>
+						<li> 
+							
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474701763903275484.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474697791044732188.jpg"/></a>
+							
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/238_thumb_g_1442262102444.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1998年 茅台(白皮) 53度 500ml</a></h3>
+											<h4>￥6500.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/539_thumb_g_1463047054056.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1996 年 五粮液长城塑盖 52度 500ml</a></h3>
+											<h4>￥3500.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/238_thumb_g_1442262102444.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1999年 茅台(飞天牌白皮)53度 500ml</a></h3>
+											<h4>￥6000.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/532_thumb_g_1460247268138.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1999年茅台酒(五星牌) 53度 500ml</a></h3>
+											<h4>￥6000.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/invest_index.png" alt="" />
+						</li>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474701763903275484.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474701792547405680.jpg"/></a>
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/82_thumb_g_1481020205940.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">80 年代 汾酒(玻璃瓶)60度 500ml</a></h3>
+											<h4>￥1300.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/92_thumb_g_1480656022061.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">1999 年 汾酒(玻璃瓶)60度 500ml</a></h3>
+											<h4>￥899.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/736_thumb_g_1480663710584.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">80年代 西凤 凤凰牌 60度 500ml</a></h3>
+											<h4>￥4200.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/735_thumb_g_1474708502647.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">80年代 董酒 59度 500ml</a></h3>
+											<h4>￥3200.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		<!--3楼葡萄酒-->
+			
+			<div class="F3">
+				<h6>葡萄酒馆 <span><a href=""> 整箱特惠 送礼精选 更多</a></span></h6>
+				<div class="F3_con">
+					<ul>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474702475330627856.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474702654546536438.jpg"/></a>
+						</li>
+						<li>
+									<dl >
+										<dt><a href=""><img src="img/294_thumb_g_1446099545233.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">剑南春 金剑南k6 52度 500ml</a></h3>
+											<h4>￥182.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/514_thumb_g_1459295001300.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2014年 十年红花郎酒 53° 500ml</a></h3>
+											<h4>￥269.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start show" src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/829_thumb_g_1480926915307.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">汾酒集团53度清香古酿1500ml 大坛</a></h3>
+											<h4>￥249.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/651_thumb_g_1472461157792.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">53d度 20年汾酒 475ml</a></h3>
+											<h4>￥369.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							<a href=""><img width="240" height="255" class="easy_lb2" src="img/1474702383657352371.jpg"/></a>
+							<a href=""><img width="240" height="255" class="easy_lb1" src="img/1474702654546536438.jpg"/></a>
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/638_thumb_g_1471596210294.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2009年 四特 老窖酒 45度 450ml</a></h3>
+											<h4>￥88.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/539_thumb_g_1463047054056.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2008年 黄果树精品大曲 52度 250ml</a></h3>
+											<h4>￥50.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/534_thumb_g_1461575227963.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2012年茅台 53度+2008 五粮液</a></h3>
+											<h4>￥2288.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+						<li>
+							
+									<dl >
+										<dt><a href=""><img src="img/534_thumb_g_1461575227963.jpg" width="90%" height="170px"/></a></dt>
+										<dd>
+											<h3> <a href="">2012年茅台 53度+2008 五粮液</a></h3>
+											<h4>￥2288.00</h4>
+										</dd>
+									</dl>
+									<img class="now_start " src="img/is_promote.png" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+	<!--酒的相关知识-->
+		<div id="rel_knowl">
+			<div class="rel_knowl_up">
+				<ul>
+					<li><a href=""><img width="292px" src="img/index_bdmj.jpg"/></a></li>
+					<li><a href=""><img width="292px" src="img/index_dfmj.jpg"/></a></li>
+					<li><a href=""><img width="292px" src="img/index_lhzq.jpg"/></a></li>
+					<li><a class="a1" href=""><img width="292px"  src="img/index_xjsc.jpg"/></a></li>
+				</ul>
+			</div>
+			<div class="rel_knowl_down">
+				<dl>
+					<dt><a href=""><img width="200" height="140" src="img/1481019216245046908.png"/></a></dt>
+					<dd>
+						<h5>老司机带你了解究竟</h5>
+						<p>现如今白酒品牌众多，广告语、宣传语层出不穷，经常看到的有年份酒、窖龄酒、陈年酒和陈年老酒的各种宣传，到底这些酒有什么区别呢？接下来华致陈香来...<span><a href="">点击查看</a></span></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href=""><img 
+						width="200" height="140" src="img/1481018858518854801.jpg"/></a></dt>
+					<dd>
+						<h5>老司机带你了解究竟</h5>
+						<p>三国群雄，煮酒论英雄！三国●酒●杀<span><a href="">点击查看</a></span></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href=""><img width="200" height="140"
+						src="img/1479892352039374466.jpg"/></a></dt>
+					<dd>
+						<h5>老司机带你了解究竟</h5>
+						<p>品酒是中华酒道中重要核心，只有掌握基本的品酒技巧,才能辨别酒的品味、品质、品格、品种，才能提高饮酒时的精神享受。白酒的口味有圆润、浓厚、绵软...<span><a href="">点击查看</a></span></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+	<!--showWall-->
+		<div id="showWall">
+			<h3>品牌墙</h3>
+			<div class="row_line">
+				
+			</div>
+			<div class="showWall_con">
+				<ul>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					<li>
+						<a href=""><img class="red_img" src="img/1443048490338033807.jpg"/></a>
+						<div class="red_div">
+							剑南春
+						</div>
+					</li>
+					
+				<!--鼠标滑过效果-->	
+				<script type="text/javascript">
+					$(window).ready(function(){
+						$(".showWall_con ul li").mouseenter(function(){
+							var img=this.children[0].children[0];
+							var div=this.children[1]
+					
+							$(img ).animate({
+								top:70
+							},300)
+							$(div).animate({
+								top:0
+							},300)
+							
+						})
+						$(".showWall_con ul li").mouseleave(function(){
+							var img=this.children[0].children[0];
+							var div=this.children[1]
+					
+							$(img ).animate({
+								top:0
+							},300)
+							$(div).animate({
+								top:70
+							},300)
+							
+						})
+					})
+				</script>
+				</ul>
+			</div>
+		</div>
+		
+	<!--yq_link-->
+		<div id="yq_link">
+			<div class="yq_link_con">
+				<div class="yq_link_up">
+				<h3>400-118-5919 <span>客服热线&nbsp &nbsp8:00-23:00贴心服务</span></h3>
+			</div>
+			<div class="yq_link_down">
+				<div class="link_lists1 link_lists ">
+					<ul>
+						<li><a class="a1" href="">购物指南</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">会员介绍</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系客服</a></li>
+					</ul>
+				</div>
+				<div class="link_lists2 link_lists">
+					<ul>
+						<li><a class="a1" href="">购物指南</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">会员介绍</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系客服</a></li>
+					</ul>
+				</div>
+				<div class="link_lists3 link_lists">
+					<ul>
+						<li><a class="a1" href="">购物指南</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">会员介绍</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系客服</a></li>
+					</ul>
+				</div>
+				<div class="link_lists4 link_lists">
+					<ul>
+						<li><a class="a1" href="">购物指南</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">会员介绍</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系客服</a></li>
+					</ul>
+				</div>
+				<div class="link_lists5 link_lists">
+					<ul>
+						<li><a class="a1" href="">购物指南</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">会员介绍</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系客服</a></li>
+					</ul>
+				</div>
+				<div class="link_lists6 link_lists">
+					<ul>
+						<li><a class="a1" href="">  购物指南</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">会员介绍</a></li>
+						<li><a href="">常见问题</a></li>
+						<li><a href="">联系客服</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+	<!--bottom-->
+		<div id="bottom">
+			<div class="bottom_con">
+				<div class="bottom_left">
+					<ul>
+						<li><a  class="a1" href="">公司介绍</a></li>
+						<li><a href="">活动公告</a></li>
+						<li><a href="">媒体报告</a></li>
+						<li><a href="">购物指南</a></li>
+						<li><a href="">快递查询</a></li>
+					</ul>
+					<p>购买的时候请确认达到法定饮酒年龄！华致陈香不销售含酒精产品给18岁以下人士！</p>
+					<h3>ⓒ2015-2016 laojiupd.com 华致陈香 ALL Rights Reserved 京ICP证15040522号</h3>
+				</div>
+				<div class="bottom_right">
+					<dl>
+						<dt><img height="79" width="79" border="1 solid #fff" src="img/mobile.png"/></dt>
+						<dd>手机老酒频道</dd>
+					</dl>
+					<dl>
+						<dt><img height="79" width="79" border="1 solid #fff" src="img/mobile.png"/></dt>
+						<dd>手机老酒频道</dd>
+					</dl>
+					<dl>
+						<dt><img height="79" width="79" border="1 solid #fff" src="img/mobile.png"/></dt>
+						<dd>手机老酒频道</dd>
+					</dl>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
