@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>err</title>
 		<link rel="stylesheet" href="css/common.css" />
-		<link rel="stylesheet"  href="css/shopping_index.css"/>
+		<link rel="stylesheet"  href="css/err.css"/>
 		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -19,7 +19,7 @@
 			<div class="top_right">
 				<ul class="top_nav">
 					<li><a class="top_nav_a1" href="huiyuanCenter.html">会员中心</a></li>
-					<li><a href="huiyuanCenter.html">我的订单</a></li>
+					<li><a href="shopping_index.html">我的订单</a></li>
 					<li>
 						<a href="about_us.html">关于我们</a>
 					</li>
@@ -127,7 +127,7 @@
 			<div id="nav_con">
 				<ul class="nav_nav">
 					<li class="li1">全部商品分类</li>
-					<li class="li"><a href="index.html">首页</a></li>
+					<li class="li"><a href="">首页</a></li>
 					<li class="li"><a href="">在线拍卖</a></li>
 					<li class="li"><a href="">老酒估值</a></li>
 					<li class="li"><a href="">我要寄卖</a></li>
@@ -527,83 +527,31 @@
 		
 	<!--mian-->
 	<div id="main">
-		<div class="main_con">
-			<div class="liucheng">
-				<p>1.我的购物车</p>
-				<p>填写核对订单信息</p>
-				<p>成功提交订单</p>
-			</div>
-			<h2>
-				我的购物车
-			</h2>
-			<div class="shop_th">
-				<input type="checkbox" checked="checked" />
-				<p class="p1">全选</p>
-				<p class="p2">商品</p>
-				<p>本店价</p>
-				<p>数量</p>
-				<p class="p3">小计(元)</p>
-				<p class="p4">操作</p>
-				
-			</div>
-			<div class="shop_list">
-				<input type="checkbox"  value="" checked="checked"/>
-				<a href=""><img class="sp_img" src=""/></a>
-				<a href=""><span class="sp_name">喔喔偶我我无无无无无无</span></a>
-				<p class="sp_price">
-					452
-				</p>
-				<div class="sp_shuliang">
-					<div class="jian_btn">
-						-
-					</div>
-					<div class="zhi">
-						1
-					</div>
-					<div class="jia_btn">
-						+
-					</div>
+			<div class="mainCon">
+				<div class="success_tishi">
+					<img src="img/dd_05.png" width="230" height="230" alt="" />
+					<h2>抱歉，操作失败!<b class="return_index" href="">返回首页</b></h2>
+					<p><span class="daojishi">5</span>秒后返回首页</p>
 				</div>
-				<p class="sp_total_pri">
-					452
-				</p>
-				<div class="oprate">
-					<a href="" class="delete_btn">删除</a>
-					<a href="" class="jiaru_shoucang">加入收藏</a>
-				</div>
-				
-			</div>
-			<div class="shop_list">
-				<input type="checkbox"  value="" checked="checked"/>
-				<a href=""><img class="sp_img" src=""/></a>
-				<a href=""><span class="sp_name">喔喔偶我我无无无无无无</span></a>
-				<p class="sp_price">
-					452
-				</p>
-				<div class="sp_shuliang">
-					<div class="jian_btn">
-						-
-					</div>
-					<div class="zhi">
-						1
-					</div>
-					<div class="jia_btn">
-						+
-					</div>
-				</div>
-				<p class="sp_total_pri">
-					452
-				</p>
-				<div class="oprate">
-					<a href="" class="delete_btn">删除</a>
-					<a href="" class="jiaru_shoucang">加入收藏</a>
-				</div>
-				
-			</div>
-			
-		</div>
+			</div>		
 	</div>
-		
+	<!--5秒后返回首页-->
+	<script>
+		$(window).ready(function(){
+			$(".return_index").on("click",function(){
+				window.location.assign("index.html")
+			})
+			var index=5;
+			var t=setInterval(function(){
+				index--;
+				$(".daojishi").html(index);
+				if(index==0){
+					clearInterval(t);
+					window.location.assign("index.html")
+				}
+			},1000)
+		})
+	</script>
 	<!--yq_link-->
 		<div id="yq_link">
 			<div class="yq_link_con">

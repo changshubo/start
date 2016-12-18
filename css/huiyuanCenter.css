@@ -1,0 +1,23 @@
+/*与公共差别的地地方*/
+.banner_left{display: none;}
+
+#main{height: auto;overflow: hidden;min-height: 680px;}
+.mainCon{width: 1200px;height: auto;min-height:680px;overflow: hidden;margin: 0 auto;padding-top: 30px;padding-bottom: 40px;}
+.mainCon_left{width: 180px;float: left;background: #FFFFFF;height: 540px;border: 1px solid #C0C0C0;}
+.mainCon_right{width: 970px;float: right;background: #FFFFFF;border: 1px solid #C0C0C0;min-height: 600px;padding-left: 30px;}
+.mainCon h2{margin-bottom: 12px;color: #666;font-size: 14px;}
+.mainCon h2 span{color: black;font-size: 14px;}
+.mainCon_left h3{height: 35px;padding-left: 8px;color: #cd2a2c;font-size: 12px;font-weight: 600;line-height: 35px;background: #e7e7e7;}
+.mainCon_left ul .li1{padding-left: 22px;background: #f9f9f9;font-size: 12px;height: 29px;line-height: 29px;border-bottom: 1px solid #C0C0C0;color: black;}
+.mainCon_left ul li{height: 30px;padding-left: 50px;background: url(../img/hyzx.gif) no-repeat 40px ;font-size: 12px;line-height: 30px;}
+.mainCon_left ul li a{color: #666;}
+.mainCon_left ul li a:hover{text-decoration: underline;color: red;}
+.mainCon_right h2{height: 64px;line-height: 64px;font-size: 14px;font-weight: 600;color: #333;}
+.mainCon_right h2 span{color: red;}
+.mainCon_right p{font-size: 14px;color: #666666;height: 20px;line-height: 20px;}
+.mainCon_right p span{color: red;}
+.div1{width: 900px;height: 48px;background: #fff4e8;border: 1px solid #dfcb9f;padding-left: 50px;font-size: 14px;font-weight: 600;color: #b78245;line-height: 50px;margin-bottom: 45px;margin-top: 30px;}
+.div21{width: 370px;float: left;margin-right: 25px;}
+.div2 h3{height: 28px;font-size: 18px;color: #666;border-bottom: 2px solid #c30000;margin-bottom: 40px;}
+.div2 p{height: 26px;line-height: 26px;}
+.div22{width: 160px;float: left;}

@@ -1,0 +1,10 @@
+/*与公共差别的地地方*/
+.banner_left{display: none;}
+
+/*main*/
+#main{min-height: 380px;}
+.mainCon{min-height: 380px;margin: 0 auto;}
+.success_tishi{width: 280px;height: 280px;margin: 120px auto;}
+.success_tishi h2{height: 26px;font-size: 26px;color: green;font-weight: 600;}
+.success_tishi  b{text-decoration: underline;font-size: 18px;color: red;}
+.success_tishi p{margin-top: 20px;color: black;font-size: 16px;}

@@ -1,0 +1,13 @@
+/*与公共差别的地地方*/
+.banner_left{display: none;}
+
+
+/*mian*/
+#main{height: auto;overflow: hidden;min-height: 880px;}
+.mainCon{width: 1200px;height: auto;min-height:880px;overflow: hidden;margin: 0 auto;padding-top: 30px;padding-bottom: 40px;}
+.mainCon_left{width: 200px;float: left;background: #FFFFFF;}
+.nav_list{width: 200px;}
+.nav_list ul .li1{height: 40px;background: #C1A25F;text-align: center;line-height: 40px;font-size: 12px;font-weight: 600;color: #FFFFFF;}
+.nav_list ul li a{display:block; height: 30px;line-height: 30px;text-align: center;color: #686868;font-size: 12px;font-weight: 600;}
+.mainCon_right{width: 970px;float: right;background: #FFFFFF;min-height: 860px;}
+.mainCon_right h2{padding-left: 20px;font-size: 16px;color: #c70245;margin-top: 30px;}

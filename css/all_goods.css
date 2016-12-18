@@ -1,0 +1,46 @@
+/*与公共差别的地地方*/
+.banner_left{display: none;}
+
+/*main*/
+#main{height: auto;min-height: 800px;overflow: hidden;}
+.mainCon{height: auto;width: 1198px;margin: 0 auto;margin-bottom: 40px;margin-top: 30px;}
+.mainCon h2{height: 35px;font-size: 14px;color: #666;}
+.mainCon h2 span{color: black;}
+.goods_inf{height: 600px;background: #FFFFFF;border: 1px solid #ccc;padding-top: 20px;padding-left: 25px;}
+.inf_left{float: left;width: 400px;position: relative;}
+.goods_img{border:1px solid #CCCCCC;width: 398px;height: 398px;position: relative;}
+.yinying{width: 200px;height: 200px;background: mistyrose;opacity: 0.4;position: absolute;left: 0;top:0;display: none;}
+.move_div{width: 400px;height: 400px;position: absolute;left: 0;top: 0;}
+.goods_bigimg{border: 1px solid #CCCCCC;width: 398px;height: 398px;position: absolute;left: 420px;top:0;overflow: hidden;display: none;}
+.bigimg{position: absolute;left: -200px;top:-100px;}
+.goods_img_nav{height: 88px;border: 1px solid #CCCCCC;padding-left: 50px;padding-top: 20px;}
+.goods_img_nav ul li {float: left;margin-right: 9px;}
+.goods_img_nav ul li img{border: 1px solid #ccc;}
+.fenxiangdao{height: 40px;border: 1px solid #ccc;}
+.fenxiangdao p{height: 40px;line-height: 40px;font-size: 14px;color: #666;width: 58px;padding-left: 8px;float: left;}
+.fenxiangdao ul{padding-top: 8px;float: left;width: 200px;}
+.fenxiangdao ul li {float: left;margin-right: 6px;}
+.shoucang_span{float: right;width: 60px;height: 40px;line-height:40px;padding-left: 20px;font-size: 14px;color: #666;background: url(../img/sc.gif ) no-repeat padding-box 0 14px;padding-right: 10px;cursor: pointer;}
+
+.inf_mediun{width: 530px;float: left;padding-top: 25px;padding-left: 20px;}
+.inf_mediun h3{color: #333;font-size: 16px;margin-bottom: 40px;}
+.relate_inf{width: 500px;height: 120px;border-bottom: 1px dashed #ccc;}
+.relate_inf p{height: 30px;background: #fafafa;line-height: 30px;padding-left: 12px;}
+.relate_inf .this_price{font-size: 22px;display: block;color: #cc3333;float: left;font-weight: 600;}
+.relate_inf p b{font-size: 12px;color: #666;float: left;margin-right: 30px;width: 42px;}
+.relate_inf .h5 { float: left;color: #396282;font-size: 12px;background: url(../img/xing.gif) no-repeat 0;padding-left:80px;}
+.relate_inf h6{padding-left: 50px;margin-top: 35px;font-size: 12px;color: #999;}
+
+.into_gouwuche{width: 500px;height: 160px;border-bottom: 1px dashed #ccc;}
+.number_sp{height: 35px;margin-top: 15px;}
+.number_sp p{width: 61px;height: 35px;line-height: 35px;font-size: 12px;color: #666;padding-left: 12px;float: left;}
+.jia{width: 25px;height: 33px;border: 1px solid #b2b2b2;font-size: 12px;color: #666;background: #f3f3f3;text-align: center;line-height: 35px;float: left;cursor: pointer;}
+.jian{width: 25px;height: 33px;border: 1px solid #b2b2b2;font-size: 12px;color: #666;background: #f3f3f3;text-align: center;line-height: 35px;float: left;cursor: pointer;}
+.zhi{width: 50px;border-bottom: 1px solid #b2b2b2;border-top: 1px solid #b2b2b2;text-align: center;color: black;line-height: 33px;height: 33px;float: left;}
+.into_gouwuche input{width: 154px;height: 48px;background: url(../img/jia.gif) no-repeat;margin-left: 68px;margin-top: 50px;border: 0;cursor: pointer;}
+.inf_mediun h5{font-size: 12px;color: #666;margin-top: 30px;margin-left: 12px;}
+.inf_right{width: 130px;float: left;}
+.inf_right_up {width: 130px;height: 180px;background: url(../img/kun.gif) no-repeat 0 38px;}
+.inf_right_down dl{margin-top: 20px;}
+.inf_right_down dl dt{height: 20px;line-height: 20px;color: black;padding-left: 25px;background: url(../img/no.gif) no-repeat;font-size: 12px;}
+.inf_right_down dl dd{font-size: 12px;color: #666;height: 26px;line-height: 26px;padding-left: 25px;}

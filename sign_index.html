@@ -13,15 +13,15 @@
 		
 		<div id="top">
 			<div class="top_left">
-				<a class="log_on" href="">Hi 请登录</a>
-				<a class="register" href="">免费注册</a>
+				<a class="log_on" href="log_index.html">Hi 请登录</a>
+				<a class="register" href="sign_index.html">免费注册</a>
 			</div>
 			<div class="top_right">
 				<ul class="top_nav">
-					<li><a class="top_nav_a1" href="">会员中心</a></li>
-					<li><a href="">我的订单</a></li>
+					<li><a class="top_nav_a1" href="huiyuanCenter.html">会员中心</a></li>
+					<li><a href="huiyuanCenter.html">我的订单</a></li>
 					<li>
-						<a href="">关于我们</a>
+						<a href="about_us.html">关于我们</a>
 					</li>
 					<li class="li33">
 						<a class="top_nav_phone" href="">_手机逛华致_</a>
@@ -127,7 +127,7 @@
 			<div id="nav_con">
 				<ul class="nav_nav">
 					<li class="li1">全部商品分类</li>
-					<li class="li"><a href="">首页</a></li>
+					<li class="li"><a href="index.html">首页</a></li>
 					<li class="li"><a href="">在线拍卖</a></li>
 					<li class="li"><a href="">老酒估值</a></li>
 					<li class="li"><a href="">我要寄卖</a></li>
@@ -648,7 +648,7 @@
 						</h5>
 					</div>
 					<div class="sign">
-						<b></b><input type="button" value="同意并注册" class="sign_ipt" />
+						<b></b><input  type="button" value="同意并注册" class="sign_ipt" />
 					</div>
 				
 				
@@ -656,6 +656,7 @@
 		</div>
 		<script type="text/javascript">
 			$(window).ready(function(){
+			var isSuccess=false;
 //			用户名命名规则 \\ 这里需要用ajax检查用户名是否重复
 				$(".username_ipt").on("blur",function(){
 					var a1=$(".username_ipt").val();
@@ -796,9 +797,21 @@
 					if(b==yzm){
 						$(".yanzhengma_tishi").html("验证码正确");
 						$(".yanzhengma_tishi").css("color","#909090")
+						var q1=$(".username_tishi").html();
+						var q2=$(".passward_tishi").html();
+						var q3=$(".re_passward_tishi").html();
+						var q4=$(".email_tishi").html();
+						var q5=$(".yanzhengma_tishi").html();
+						
+						if((q1=="可以使用")&&(q2=="成功")&&(q3=="正确")&&(q4=="正确")){
+							isSuccess=true;
+						}else{
+							isSuccess=false;
+						}
 					}else{
 						$(".yanzhengma_tishi").html("验证码不正确");
 					}
+					
 				})
 				$(".yanzhengma_ipt").on("focus",function(){
 					var c=$(".yanzhengma_tishi").html();
@@ -812,6 +825,17 @@
 				$(".suiji_yzm").click(function(){
 					yzm=createYzm(4);
 					$(".suiji_yzm").html(yzm);
+				})
+				
+				//				注册成功会自动跳转-->
+				$(".sign_ipt").click(function(){
+					console.log(isSuccess)
+					if(isSuccess){
+						window.location.assign("success.html")
+					}else{
+						window.location.assign("err.html")
+					}
+				
 				})
 			})
 		</script>
