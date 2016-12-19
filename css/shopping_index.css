@@ -4,8 +4,8 @@
 
 
 /*main_con*/
-#main{min-height: 600px;border-bottom: 60px solid #fff;}
-.main_con{height: 600px;width: 1143px;margin: 0 auto;margin-top: 30px;margin-bottom: 60px ;background: #fff;border: 1px solid #CCCCCC;padding-top: 50px;padding-left: 55px;}
+#main{min-height: 600px;border-bottom: 60px solid #fff;height: auto;}
+.main_con{height:auto; min-height: 600px;width: 1143px;margin: 0 auto;margin-top: 30px;padding-bottom: 30px ;background: #fff;border: 1px solid #CCCCCC;padding-top: 50px;padding-left: 55px;}
 .liucheng{margin-right: 55px; width: 480px;height: 42px;background: url(../img/step1.png) no-repeat;float: right;}
 .liucheng p{float: left;width:160px;color: #7abd54;font-size: 12px;text-align: center;height: 20px;line-height: 20px;margin-top: 24px;}
 .main_con h2{margin-top: 30px; color: black;font-size: 22px;font-weight: 600;}
@@ -16,7 +16,7 @@
 .shop_th .p3{width: 90px;}
 .shop_th .p1{width: 140px;}
 .shop_th .p4{width: 40px;}
-.shop_list{width: 1090px;height: 90px;background: #f3f3f3;border-top: 1px solid #c5c5c5;padding-top: 18px;}
+.shop_list{width: 1090px;height: 90px;background: #f3f3f3;border-top: 1px solid #c5c5c5;padding-top: 18px;display: none;}
 .shop_list input{width: 12px;height: 14px;float: left;}
 .sp_img{width: 79px;height: 79px;border: 1px solid #eee;float: left;margin-left: 22px;margin-right: 16px;}
 .sp_name{float: left;font-size: 12px;color: #666666;width: 594px;margin-top: 30px;}
@@ -26,5 +26,5 @@
 .jia_btn{width: 17px;border: 1px solid #cacbcb;float: left;text-align: center;cursor: pointer;}
 .zhi{width: 38px;border: 1px solid #cacbcb;float: left;margin-left: 2px;margin-right: 2px;text-align: center;}
 .sp_total_pri{float: left;width: 80px;margin-top: 30px;font-size: 14px;color: black;}
-.delete_btn{display: block;color: #4e6193;font-size: 12px;height: 30;line-height: 30px;margin-top: 10px;}
+.delete_btn{display: block;color: #4e6193;font-size: 12px;height: 30;line-height: 30px;margin-top: 10px;cursor: pointer;}
 .jiaru_shoucang{display: block;color: #4e6193;font-size: 12px;height: 30;line-height: 30px;}

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>购物车</title>
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet"  href="css/shopping_index.css"/>
 		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
@@ -572,66 +572,132 @@
 					452
 				</p>
 				<div class="oprate">
-					<a href="" class="delete_btn">删除</a>
+					<a  class="delete_btn">删除</a>
 					<a href="" class="jiaru_shoucang">加入收藏</a>
 				</div>
 				
 			</div>
-			<div class="shop_list">
-				<input type="checkbox"  value="" checked="checked"/>
-				<a href=""><img class="sp_img" src=""/></a>
-				<a href=""><span class="sp_name">喔喔偶我我无无无无无无</span></a>
-				<p class="sp_price">
-					452
-				</p>
-				<div class="sp_shuliang">
-					<div class="jian_btn">
-						-
-					</div>
-					<div class="zhi">
-						1
-					</div>
-					<div class="jia_btn">
-						+
-					</div>
-				</div>
-				<p class="sp_total_pri">
-					452
-				</p>
-				<div class="oprate">
-					<a href="" class="delete_btn">删除</a>
-					<a href="" class="jiaru_shoucang">加入收藏</a>
-				</div>
-				
-			</div>
-			
 		</div>
 	</div>
-	<!--相关操作-->
+	
+	<!--通过cookie获取数据-->
+	<script type="text/javascript">
+		$(window).ready(function(){
+			//封装的可以接受转码的cookie生成，获取，删除方法
+		var cookieUtil={
+    		setCookie:function (name,value,days){
+       		var date=new Date();
+        	date.setDate(date.getDate()+days);
+        document.cookie=name+"="+encodeURIComponent(value)+";expires="+date;
+   			},
+   			getCookie: function (name){
+            	var cookieValue="";
+            	var strCookie=document.cookie;
+           		var arrCookie=strCookie.split("; ");
+           	 	for(var i=0;i<arrCookie.length;i++){
+                var item=arrCookie[i].split("=");
+                if(item[0]==name){
+                    cookieValue=item[1];
+                }
+          		}
+            return decodeURIComponent(cookieValue);
+   			},
+   			removeCookie:function(name){
+        		this.setCookie(name,"",-1);
+    		}
+		}
+			var strShopping=cookieUtil.getCookie("cookieshopping");
+//				$(".main_con").html(""); 清楚本页的东西
+			if(strShopping.length>0){
+				var arrProduct=strShopping.split("||");
+				console.log(arrProduct.length);
+				for (var i=0;i<arrProduct.length;i++){
+					var arrShopping=arrProduct[i].split("&&");
+					var CKname=arrShopping[0];
+					var CKimgSrc=arrShopping[1];
+					var CKprice=arrShopping[2];
+					var CKcount =arrShopping[3];
+//					console.log( CKname);
+//					console.log(CKimgSrc);
+//					console.log(CKprice);
+//					console.log(CKcount);
+				//给对应的内容导入cookie中的值
+					if(i==0){
+						$(".shop_list").css("display","block");
+						$(".sp_name").html(CKname);
+						$(".sp_img")[0].src=CKimgSrc;
+						$(".sp_price").html(CKprice);
+						$(".zhi").html(CKcount);
+						$(".sp_total_pri").html(CKprice);
+					}else{
+						var div=$(".shop_list")[0].cloneNode(true);
+						$(".sp_name").html(CKname);
+						$(".sp_img")[0].src=CKimgSrc;
+						$(".sp_price").html(CKprice);
+						$(".zhi").html(CKcount);
+						$(".sp_total_pri").html(CKprice);
+						$(".main_con")[0].appendChild(div);
+//						console.log($(".shop_list")[0])
+//						console.log($(".shop_list")[0].cloneNode(true))
+					}
+				}
+			}
+			
+		//删除cookie
+			$(".delete_btn").click(function(){
+				var x=this.parentNode.parentNode.children[2].children[0].innerHTML;
+				delProdect(x);
+				this.parentNode.parentNode.style.display="none";
+			})
+			function delProdect(CKname){
+				var strProducts=cookieUtil.getCookie("cookieshopping");
+				var arrProducts=strProducts.split("||");
+				for(var i=0;i<arrProducts.length;i++){
+					var arrItem=arrProducts[i].split("&&");
+//					console.log(arrItem[0]);
+//					console.log(CKname)
+					if(arrItem[0]==CKname){
+						
+						//找到这个商品，删除
+						//从数组里面删除相应的商品；
+						arrProducts.splice(i,1);
+						break;//删除一个后，跳出；
+					}
+				}
+				var newStr=arrProducts.join("||");
+				cookieUtil.setCookie("cookieshopping",newStr,30);
+			}
+		})
+			
+	</script>
+	<!--相关操作 (数量加减，总价格变化)-->
 	<script>
 		$(window).ready(function(){
-			var y=$(".sp_total_pri").html();
+			var y=159;
 		//商品数量的变化,点击加号时增加一，点击减号时...
-		//
-			$($(".jian_btn")[0]).click(function(){
-				var x=$(".zhi").html();
+		//这个怎么可以获取一个不变的量
+			$(".jian_btn").click(function(){
+				var p=this.parentNode.parentNode.children[5].innerHTML;
+				var num=this.parentNode.children[1];
+				var x=num.innerHTML;
 				var x=x-1;
 				if(x<=1){
 					x=1;
 				}
-				$(".zhi").html(x);
+				this.parentNode.children[1].innerHTML=x;
 				var z=0;
-				var z=y*x;
-				$(".sp_total_pri").html(z);
-				
+				var z=p*x;
+				this.parentNode.parentNode.children[5].innerHTML=z+".00";	
 			})
 			$($(".jia_btn")[0]).click(function(){
-				var x=$(".zhi").html();
+				var p=this.parentNode.parentNode.children[5].innerHTML;
+				var num=this.parentNode.children[1];
+				var x=num.innerHTML;
 				var x=+x+1;
-				$(".zhi").html(x);
+				this.parentNode.children[1].innerHTML=x;
 				var z=0;
-				var z=y*x;
-				$(".sp_total_pri").html(z);
+				var z=p*x;
+				this.parentNode.parentNode.children[5].innerHTML=z+".00";	
 			})
 		})
 	</script>

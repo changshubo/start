@@ -74,7 +74,8 @@ html{background: #ebece7;}
 .tele span{color: red;font-weight: 600;}
 
 /*logo*/
-#logo{margin: 0 auto;padding-top:20px;background:#FDFDFD;width: 1200px;height: 90px;}
+#big_logo{height: 110px;background: url(../img/header_1.jpg) no-repeat 50%;}
+#logo{margin: 0 auto;padding-top:20px;width: 1200px;height: 90px;}
 .logo_left1{float: left;margin-right:10px;}
 .logo_left2{float: left;margin-right: 10px;}
 .logo_right1{float: left;margin-top:12px;}
@@ -97,7 +98,7 @@ html{background: #ebece7;}
 #nav_con{width: 1200px;margin:0 auto;position: relative;}
 .nav_nav li{float: left;}
 .nav_nav li a{float: left;font-size: 14px;color: #ffeded;width: 104px  ;height: 38px;text-align: center;line-height: 38px;}
-.nav_nav li a:hover{background: #cf171f;}
+.nav_nav li a:hover{background: #B40C10;}
 .nav_nav .li1{background:#cf171f url(../img/nav-1.gif) no-repeat 8px ;width: 212px;text-align: center;height: 38px;line-height: 38px;color:#ffeded ;}
 .nav_nav .li10{margin-top:6px;}
 
