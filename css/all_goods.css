@@ -8,11 +8,18 @@
 .mainCon h2 span{color: black;}
 .goods_inf{height: 600px;background: #FFFFFF;border: 1px solid #ccc;padding-top: 20px;padding-left: 25px;}
 .inf_left{float: left;width: 400px;position: relative;}
+
+
+
+
 .goods_img{border:1px solid #CCCCCC;width: 398px;height: 398px;position: relative;}
 .yinying{width: 200px;height: 200px;background: mistyrose;opacity: 0.4;position: absolute;left: 0;top:0;display: none;}
 .move_div{width: 400px;height: 400px;position: absolute;left: 0;top: 0;}
-.goods_bigimg{border: 1px solid #CCCCCC;width: 398px;height: 398px;position: absolute;left: 420px;top:0;overflow: hidden;display: none;}
-.bigimg{position: absolute;left: -200px;top:-100px;}
+.goods_bigimg{border: 1px solid #CCCCCC;width: 398px;height: 398px;position: absolute;left: 420px;top:0;overflow: hidden;display:none;background: #FFFFFF;}
+.bigimg{position: absolute;}
+
+
+
 .goods_img_nav{height: 88px;border: 1px solid #CCCCCC;padding-left: 50px;padding-top: 20px;}
 .goods_img_nav ul li {float: left;margin-right: 9px;}
 .goods_img_nav ul li img{border: 1px solid #ccc;}

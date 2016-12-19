@@ -641,26 +641,61 @@
 				})
 				//放大镜效果
 				$(".move_div").mouseenter(function(e){
-						var x=e.clientX;
-						var y=e.clientY;
-						console.log(x);
-						console.log(y);
+					$(".move_div").mousemove(function(e){
+					//x,y 为阴影相对于小图片框的定位;e.page为相对于当前页面的距离，不加滚动条，而e.client是包括滚动条的
+						y=e.pageY-$(".inf_left")[0].offsetTop-100;
+						x=e.pageX-$(".inf_left")[0].offsetLeft-100;
+						if(x<=0){
+							x=0;
+						}
+						if(y<=0){
+							y=0;
+						}
+						
+						if(x>=200){
+							x=200
+						}
+						if(y>=200){
+							y=200
+						}
+						var _left=200-x/400*800-150;
+						var _top=200-y/400*800-150;
 						$(".yinying").css({
-							dispaly:"block",
+							display:"block",
+							left:x,	
+							top:y
+						})	
+						$(".goods_bigimg").css({
+							display:"block",
 						})
-						$(".move_div").mousemove(function(e){
-							var _left=e.clientX-100-102;
-							var _top=e.clientY-100-y;
-							
-						console.log(e.clientX+"x");
-						console.log(e.clientY+"y");
-						console.log(_left);
-						console.log(_top);
-							$(".yinying").css({
+						$(".goods_bigimg img").css({
 							left:_left,
 							top:_top
 						})
-						})
+					})
+				})
+				$(".move_div").mouseleave(function(){
+					$(".yinying").css({
+						display:"none",
+					})	
+					$(".goods_bigimg").css({
+						display:"none",
+					})
+				})
+				
+				//商品数量的变化,点击加号时增加一，点击减号时...
+				$(".jian").click(function(){
+					var x=$(".zhi").html();
+					var x=x-1;
+					$(".zhi").html(x);
+					if(x<=1){
+						$(".zhi").html(1);	
+					}
+				})
+				$(".jia").click(function(){
+					var x=$(".zhi").html();
+					var x=+x+1;
+					$(".zhi").html(x);
 				})
 			})
 		</script>

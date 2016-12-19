@@ -603,6 +603,34 @@
 			
 		</div>
 	</div>
+	<!--相关操作-->
+	<script>
+		$(window).ready(function(){
+			var y=$(".sp_total_pri").html();
+		//商品数量的变化,点击加号时增加一，点击减号时...
+		//
+			$($(".jian_btn")[0]).click(function(){
+				var x=$(".zhi").html();
+				var x=x-1;
+				if(x<=1){
+					x=1;
+				}
+				$(".zhi").html(x);
+				var z=0;
+				var z=y*x;
+				$(".sp_total_pri").html(z);
+				
+			})
+			$($(".jia_btn")[0]).click(function(){
+				var x=$(".zhi").html();
+				var x=+x+1;
+				$(".zhi").html(x);
+				var z=0;
+				var z=y*x;
+				$(".sp_total_pri").html(z);
+			})
+		})
+	</script>
 		
 	<!--yq_link-->
 		<div id="yq_link">
