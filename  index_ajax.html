@@ -23,7 +23,6 @@
 				//当滚动条到某位置
 				window.onscroll=function(){
 					var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
-						console.log(scrollTop)
 					if(scrollTop<=1300){
 						$("#side_left").css({
 							display:"none"
@@ -851,15 +850,39 @@
 	<!--show-->
 		<div id="show">
 			<div class="one_price">
-				<div class="one_price_up">
-					<ul>
-						<li>
-							<a href=""><img  class="easy_lb1" src="img/1474698684741007930.jpg"/></a>
-							<a href=""><img class="easy_lb2"  src="img/1474698728528245528.jpg"/></a>
-						</li>
-							
-							
-					<!--简单的图片轮播-->	
+				<div class="one_price_up" id="ajax1">
+			<!--内容是用ajax加载，但是加载出来特效就没有了-->	
+		<script>
+			var xhr=new XMLHttpRequest();
+			xhr.open("get","商品信息1.json",true);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						var obData=xhr.responseText;
+						obData=JSON.parse(obData);
+						showProducts(obData,"ajax1");
+					}
+				}
+			}
+			xhr.send();
+			function showProducts(data,name){
+				var html="<ul>";
+				for(var i=0;i<data.inf.length;i++){
+					var item="<li><dl class=\"one_price_up1\">";
+						item+="<dt><a href=\"all_goods_cookie.html\"><img src=\""+data.inf[i].imgsrc1+"\" width=\"100%\" height=\"176\"/></a></dt>";
+						item+="<dd><h3> <a href=\"all_goods_cookie.html\">"+data.inf[i].name+"</a></h3>"	;		
+						item+="<h4>"+data.inf[i].price+"</h4></dd></dl>"	;		
+						item+="<img class=\"no_start\" src=\""+data.inf[i].imgsrc2+"\" alt=\"\" /></li>";
+						html+=item;
+						
+				}
+				html+="</ul>";
+				document.getElementById(name).innerHTML=html;
+			}
+			
+		</script>
+		
+		<!--简单的图片轮播-->	
 						<script type="text/javascript">
 							window.onload=function(){
 								var isLuobo="ture";
@@ -882,227 +905,72 @@
 								
 							}
 						</script>
-						
-						<li>
-							
-							<dl class="one_price_up1">
-								<dt><a href="all_goods_cookie.html"><img src="img/638_thumb_g_1471596210294.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3> <a href="all_goods_cookie.html">2009年 四特 老窖酒 45度500ml</a></h3>
-									<h4>￥68.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li>
-							
-							<dl class="one_price_up1">
-								<dt><a href=" all_goods_cookie1.html"><img src="img/695_thumb_g_1472621145902.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href=" all_goods_cookie1.html">2010年 古井贡酒 50度 500ml</a> </h3>
-									<h4>￥69.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li>
-							<dl class="one_price_up1">
-								<dt><a href="all_goods_cookie.html"><img src="img/829_thumb_g_1480926915307.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href="all_goods_cookie.html">汾酒集团53度清香古酿1500ml</a></h3>
-									<h4>￥189.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li>
-							<dl class="one_price_up1">
-								<dt><a href=" all_goods_cookie1.html"><img src="img/834_thumb_g_1480927096493.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href=" all_goods_cookie1.html">53度酱香型舒心酱酒酱道500ml</a></h3>
-									<h4>￥4.90</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li >
-							<a href=""><img src="img/1474703193896132335.jpg"/></a>
-						</li>
-						<li>
-							<a href=""><img  class="easy_lb1" src="img/1474715559900156918.jpg"/></a>
-							<a href=""><img class="easy_lb2" src="img/1474715585795914093.jpg"/></a>
-						</li>
-						<li>
-							
-							<dl class="one_price_up1">
-								<dt><a href=""><img src="img/119_thumb_g_1481019750908.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href="">1993 宋河粮液 54度 500ml</a></h3>
-									<h4>￥390.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li>
-							
-							<dl class="one_price_up1">
-								<dt><a href=""><img src="img/179_thumb_g_1481020065114.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href="">1991 卢湖 44度 500ml</a></h3>
-									<h4>￥1.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li>
-							
-							<dl class="one_price_up1">
-								<dt><a href=""><img src="img/122_thumb_g_1481020184939.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href="">1995 郎酒 53度 500ml</a></h3>
-									<h4>￥550.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li>
-							
-							<dl class="one_price_up1">
-								<dt><a href=""><img src="img/82_thumb_g_1481020205940.jpg" width="100%" height="176px"/></a></dt>
-								<dd>
-									<h3><a href="">80年代 汾酒(玻璃瓶)60度 500ml</a></h3>
-									<h4>￥1.00</h4>
-								</dd>
-							</dl>
-							<img class="no_start" src="img/08.png" alt="" />
-						</li>
-						<li><a href=""><img src="img/1474703214037098854.jpg"></a></li>
-					</ul>
-					
 				</div>
 				<div class="one_price_down">
 					<div class="one_price_down_left">
 						<div class="one_price_down_nav">
 							<ul>
-								<li><a  class="a1" >热卖商品</a></li>
-								<li><a href="">推介商品</a></li>
-								<li><a href="">整箱特惠</a></li>
-								<li><a href="">新品上架</a></li>
+								<li class="hover1"><a  class="a1" >热卖商品</a></li>
+								<li class="hover2"><a href="">推介商品</a></li>
+								<li class="hover3"><a href="">整箱特惠</a></li>
+								<li class="hover4"><a href="">新品上架</a></li>
 							</ul>
 						</div>
-						<div class="one_price_down_con" >
-							<ul>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/294_thumb_g_1446099545233.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">剑南春 金剑南k6 50度500ml</a></h3>
-											<h4>￥181.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/514_thumb_g_1459295001300.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2014 十年红花郎酒 53度 500ml</a></h3>
-											<h4>￥269.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start show" src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/525_thumb_g_1459381226143.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2015 洋河 蓝色金典 天之蓝</a></h3>
-											<h4>￥338.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/432_thumb_g_1453997883258.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">红星二锅头 (苏式扁瓶 )45度</a></h3>
-											<h4>￥39.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/361_thumb_g_1451411864700.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">62°衡水老白干玻璃绿标500ml</a></h3>
-											<h4>￥30.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/362_thumb_g_1451412265741.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2015年 衡水老白干40° 大青花</a></h3>
-											<h4>￥119.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/363_thumb_g_1451412909103.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2015年 衡水老白干41° 小青花</a></h3>
-											<h4>￥30.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/695_thumb_g_1472621145902.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2010年 古井贡酒 50° 500ml</a></h3>
-											<h4>￥69.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/482_thumb_g_1459124452154.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2014年 郎酒 53° 国藏郎酒</a></h3>
-											<h4>￥264.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-								<li>
-							
-									<dl class="one_price_down1">
-										<dt><a href=""><img src="img/837_thumb_g_1481002379193.jpg" width="100%" height="185px"/></a></dt>
-										<dd>
-											<h3> <a href="">2016年 五粮液华彩人生 50° </a></h3>
-											<h4>￥229.00</h4>
-										</dd>
-									</dl>
-									<img class="now_start " src="img/is_promote.png" alt="" />
-								</li>
-							</ul>
+						<div class="one_price_down_con" id="ajax2">
+		<!--加载图片-->
+		<script>
+		//每次鼠标移入都要进行加载，很浪费的
+			$(window).ready(function(){
+				$(".hover1").mouseenter(function(){
+				$("#ajax2").html("");
+				ajaxHover("21");
+			})
+			$(".hover2").mouseenter(function(){
+				$("#ajax2").html("");
+				ajaxHover("22");
+			})
+			$(".hover3").mouseenter(function(){
+				$("#ajax2").html("");
+				ajaxHover("23");
+			})
+			$(".hover4").mouseenter(function(){
+				$("#ajax2").html("");
+				ajaxHover("24");
+			})
+			})
+			
+		
+		function ajaxHover(data){
+			var xhr1=new XMLHttpRequest();
+			xhr1.open("get","商品信息"+data+".json",true);
+			xhr1.onreadystatechange=function(){
+				if(xhr1.readyState==4){
+					if(xhr1.status==200){
+						var obData=xhr1.responseText;
+						obData=JSON.parse(obData);
+						showProducts(obData,"ajax2");
+					}
+				}
+			}
+			xhr1.send();
+		}
+			
+			/*function showProducts1(data){
+				var html="<ul>";
+				for(var i=0;i<data.inf.length;i++){
+					var item="<li><dl class=\"one_price_down1\">";
+						item+="<dt><a href=\"all_goods_cookie.html\"><img src=\""+data.inf[i].imgsrc1+"\" width=\"100%\" height=\"176\"/></a></dt>";
+						item+="<dd><h3> <a href=\"all_goods_cookie.html\">"+data.inf[i].name+"</a></h3>"	;		
+						item+="<h4>"+data.inf[i].price+"</h4></dd></dl>"	;		
+						item+="<img class=\"no_start\" src=\""+data.inf[i].imgsrc2+"\" alt=\"\" /></li>";
+						html+=item;
+						
+				}
+				html+="</ul>";
+				document.getElementById("ajax2").innerHTML=html;
+			}*/
+			
+		</script>			
 						</div>
 					</div>
 					<div class="one_price_down_right">

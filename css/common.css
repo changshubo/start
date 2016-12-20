@@ -52,7 +52,7 @@ html{background: #ebece7;}
 
 /*top*/
 #top{width:1200px;height: 30px;margin: 0 auto;}
-.top_left{padding-left: 18px;height: 30px;line-height: 30px;float: left;width: 120px;}
+.top_left{padding-left: 18px;height: 30px;line-height: 30px;float: left;width: 180px;}
 .log_on{font-size: 12px;color: #5e5e5e;}
 .register{font-size:12px;color:#5E5E5E;}
 .top_left a:hover{color: red;text-decoration: underline;}
@@ -211,6 +211,7 @@ background: #FFF url(../img/d4.jpg) no-repeat 350px 25px;z-index: 100;display: n
 
 #show{width: 1200px;margin: 0 auto;padding: 20px;}
 .one_price_up{min-height: 500px;}
+.one_price_up ul{overflow: hidden;}
 .one_price_up ul li {float: left;border-top:1px solid #c9c9c9;border-right: 1px solid #c9c9c9;height: 249px;width: 199px;background: #fff ;position: relative;}
 
 .easy_lb1{position: absolute;left: 0;top:0;display: none;}

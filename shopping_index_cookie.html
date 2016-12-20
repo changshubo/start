@@ -569,7 +569,7 @@
 					</div>
 				</div>
 				<p class="sp_total_pri">
-					452
+					￥452.00
 				</p>
 				<div class="oprate">
 					<a  class="delete_btn">删除</a>
@@ -677,7 +677,7 @@
 		//商品数量的变化,点击加号时增加一，点击减号时...
 		//这个怎么可以获取一个不变的量
 			$(".jian_btn").click(function(){
-				var p=this.parentNode.parentNode.children[5].innerHTML;
+				var p=this.parentNode.parentNode.children[3].innerHTML;
 				var num=this.parentNode.children[1];
 				var x=num.innerHTML;
 				var x=x-1;
@@ -685,19 +685,17 @@
 					x=1;
 				}
 				this.parentNode.children[1].innerHTML=x;
-				var z=0;
 				var z=p*x;
-				this.parentNode.parentNode.children[5].innerHTML=z+".00";	
+				this.parentNode.parentNode.children[5].innerHTML="￥"+z+".00";	
 			})
 			$($(".jia_btn")[0]).click(function(){
-				var p=this.parentNode.parentNode.children[5].innerHTML;
+				var p=this.parentNode.parentNode.children[3].innerHTML;
 				var num=this.parentNode.children[1];
 				var x=num.innerHTML;
 				var x=+x+1;
 				this.parentNode.children[1].innerHTML=x;
-				var z=0;
 				var z=p*x;
-				this.parentNode.parentNode.children[5].innerHTML=z+".00";	
+				this.parentNode.parentNode.children[5].innerHTML="￥"+z+".00";	
 			})
 		})
 	</script>

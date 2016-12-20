@@ -58,7 +58,7 @@
 						})
 					</script>
 					
-					<li><a class="top_nav_car" href="shopping_index_cookie.html">购物车(<span>0</span>)</a></li>
+					<li><a class="top_nav_car" href="shopping_index_cookie.html">购物车(<span class="qqq">0</span>)</a></li>
 					<img class="qq" src="img/qq.gif" alt="" />
 					<p class="tele">客服电话&nbsp;<span>400-118-5919</span></p>
 				</ul>
@@ -762,6 +762,11 @@
 				}
 			}
 			cookieUtil.setCookie("cookieshopping",strValue,30);
+			cookieUtil.setCookie("cookieshopping",strValue,30);
+			var x=cookieUtil.getCookie("cookieshopping");
+			var y=x.split("||");
+			var z=y.length;
+			$(".qqq").html(z);
 		})
 	})
 	</script>
