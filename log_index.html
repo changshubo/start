@@ -6,8 +6,57 @@
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet"  href="css/log_index.css"/>
 		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/common.js">
 	</head>
 	<body>
+		<!--十天内免费登录，从cookie中获取数据-->
+		<script type="text/javascript">
+			$(window).ready(function(){
+				
+				//获取十天内登录的用户信息
+				var username=document.cookie;
+				var arr=username.split("; ");
+				for(var i=0;i<arr.length;i++){
+					var item=arr[i].split("=");
+					if("thisName"==item[0]){
+						var value=item[1];
+						$(".log_on").html(value+"&nbsp"+"欢迎光临本店![退出]");
+						$(".register").html("");
+						$(".welcome_log").html(value)
+					}
+				}
+				//获取免登陆用户的购物车信息
+				var xx=cookieUtil.getCookie("cookieshopping");
+				var yy=xx.split("||");
+				if(yy==""){
+					$(".qqqq").html(0);
+				}else{
+					var zz=yy.length;
+					$(".qqqq").html(zz);
+				}
+				
+				
+				
+				$(".log_on").click(function(e){
+					//如果已经登录了，就不让他跳转了
+					if("thisName"==item[0]){
+						e.preventDefault?e.preventDefault():e.returnValue=false;
+					}
+					
+					var data=new Date();
+						data.setDate(data.getDate()-10);
+					document.cookie="thisName="+""+";expires="+data;
+					document.cookie="thisPassward="+""+";expires="+data;
+					window.location.reload(true);
+				})
+				
+				$(".welcome_log").click(function(e){
+					if("thisName"==item[0]){
+						e.preventDefault?e.preventDefault():e.returnValue=false;
+					}
+				})
+			})
+		</script>
 		<!--整个网页的最顶部-->
 	<!--top-->
 		
@@ -58,7 +107,7 @@
 						})
 					</script>
 					
-					<li><a class="top_nav_car" href=" shopping_index_cookie.html">购物车(<span>0</span>)</a></li>
+					<li><a class="top_nav_car" href=" shopping_index_cookie.html">购物车(<span class="qqqq">0</span>)</a></li>
 					<img class="qq" src="img/qq.gif" alt="" />
 					<p class="tele">客服电话&nbsp;<span>400-118-5919</span></p>
 				</ul>
@@ -568,17 +617,17 @@
 						<a href="" class="log_btn"><p>立即登录</p></a>
 					</div>
 					<div class="phone_log">
-						<input class="username" type="text"  placeholder="邮箱/手机号/用户名"/>
-						<input class="passward" type="password"  placeholder="密码"/>
+						<input class="username1 username" type="text"  placeholder="请输入有效的手机号"/>
+						<input class="passward1 passward" type="password"  placeholder="密码"/>
 						<a href="" class="log_btn"><p class="p1">立即登录</p></a>
-						<a href=""><p class="p2">获取验证码</p></a>
+						<a href="" class="get_yanzhengma"><p class="p2 p21">获取验证码</p></a>
 					</div>
 				</div>
 				
 			
 				<div class="main_con_right3">
 					<div>
-						<input type="checkbox" checked="checked"/>记住用户名						
+						<input class="remember_passward" type="checkbox" checked="checked"/>记住用户名						
 						<a class="a3" href="sign_index.html"><p>免费注册</p></a>
 						<p class="p2">|</p>
 						<a  href=""><p>忘记密码</p></a>
@@ -597,10 +646,23 @@
 	<!--用户名登录简单的验证-->
 		<script>
 			$(window).ready(function(){
-				
+				var strinfma=document.cookie;
+				var arrstrinfma=strinfma.split("; ");
+				for(var j=0;j<arrstrinfma.length;j++){
+					itemstr=arrstrinfma[j].split("=");
+					if(itemstr[0]=="thisName"){
+						var strname=itemstr[1];
+						$(".username").val(strname);
+					}
+						if(itemstr[0]=="thisPassward"){
+							var strname1=itemstr[1];
+							$(".passward").val(strname1);
+						}
+					
+				}
 				var isRight=false;
 				$(".log_btn").click(function(e){
-					e.preventDefault();
+			e.preventDefault?e.preventDefault():e.returnValue=false;
 					var xhr= new XMLHttpRequest();
 					xhr.open("get","用户名信息.json",true);
 					xhr.onreadystatechange=function(){
@@ -617,20 +679,57 @@
 					
 				function isLog (data){
 					var username=$(".username").val();
+					var username1=$(".username1").val();
 					var passward=$(".passward").val();
+					var passward1=$(".passward1").val();
 					//遍历所有的json对象，看是否有符合的
 					for(var i=0;i<data.result.length;i++){
 						if((data.result[i].name==username)&&(data.result[i].passward==passward)){
 						isRight=true;	
 						}
+						if((data.result[i].name==username1)&&(data.result[i].passward==passward1)){
+						isRight=true;	
+						}
 					}
+						//如果isRight为true；而且记住密码已经被选中，则将这个用户名和密码存入cookie；使用户十天内免费登录
 					if(isRight){
-						window.location.assign("success.html")
+//						window.location.assign("success.html")
+						//记住密码被选中
+						if($(".remember_passward")[0].checked){
+//							console.log(11)
+							var data=new Date();
+							data.setDate(data.getDate()+10);
+							document.cookie="thisName="+username+";expires="+data;
+							document.cookie="thisPassward="+passward+";expires="+data;
+							window.location.assign("success.html")
+						}else{
+							document.cookie="thisPassward="+passward;
+							document.cookie="thisName="+username;
+							window.location.assign("success.html")
+						}
+						
 					}else{
 						alert("用户名或者密码错误，请重新输入")
 					}
 				}
-			//如果isRight为true；而且记住密码已经被选中，则将这个用户名和密码存入cookie；使用户十天内免费登录
+		//获取验证码，如果可以连接发短信的API则可以发送短信，目前换不可以
+		var t;
+		//t 为定时器，其为一个全局变量，其主要是让定时器停止
+		$(".get_yanzhengma").on("click",function(e){
+			//组织浏览器的默认行为
+			clearInterval(t);
+			var index=59;
+			e.preventDefault?e.preventDefault():e.returnValue=false;
+			 t=setInterval(function(){
+				$(".p21").html(index+"秒后重新发送")
+				index--;
+				if(index==0){
+					clearInterval(t);
+					$(".p21").html("重新发送")
+				}
+			},1000)
+		})
+		
 			})
 		</script>
 	<!--yq_link-->

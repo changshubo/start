@@ -6,8 +6,58 @@
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet"  href="css/shopping_index.css"/>
 		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/common.js">
+			
+		</script>
 	</head>
 	<body>
+		<!--十天内免费登录，从cookie中获取数据-->
+		<script type="text/javascript">
+			$(window).ready(function(){
+				
+				//获取十天内登录的用户信息
+				var username=document.cookie;
+				var arr=username.split("; ");
+				for(var i=0;i<arr.length;i++){
+					var item=arr[i].split("=");
+					if("thisName"==item[0]){
+						var value=item[1];
+						$(".log_on").html(value+"&nbsp"+"欢迎光临本店![退出]");
+						$(".register").html("");
+						$(".welcome_log").html(value)
+					}
+				}
+				//获取免登陆用户的购物车信息
+				var xx=cookieUtil.getCookie("cookieshopping");
+				var yy=xx.split("||");
+				if(yy==""){
+					$(".qqqq").html(0);
+				}else{
+					var zz=yy.length;
+					$(".qqqq").html(zz);
+				}
+				
+				
+				
+				$(".log_on").click(function(e){
+					//如果已经登录了，就不让他跳转了
+					if("thisName"==item[0]){
+						e.preventDefault?e.preventDefault():e.returnValue=false;
+					}
+					
+					var data=new Date();
+						data.setDate(data.getDate()-10);
+					document.cookie="thisName="+""+";expires="+data;
+					document.cookie="thisPassward="+""+";expires="+data;
+					window.location.reload(true);
+				})
+				$(".welcome_log").click(function(e){
+					if("thisName"==item[0]){
+						e.preventDefault?e.preventDefault():e.returnValue=false;
+					}
+				})
+			})
+		</script>
 		<!--整个网页的最顶部-->
 	<!--top-->
 		
@@ -58,7 +108,7 @@
 						})
 					</script>
 					
-					<li><a class="top_nav_car" href="">购物车(<span>0</span>)</a></li>
+					<li><a class="top_nav_car" href="">购物车(<span class="qqqq">0</span>)</a></li>
 					<img class="qq" src="img/qq.gif" alt="" />
 					<p class="tele">客服电话&nbsp;<span>400-118-5919</span></p>
 				</ul>
