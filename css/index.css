@@ -53,12 +53,6 @@ html{background: #ebece7;}
 
 
 
-
-
-
-
-
-
 /*top*/
 #top{width:1200px;height: 30px;margin: 0 auto;}
 .top_left{padding-left: 18px;height: 30px;line-height: 30px;float: left;width: 280px;}
@@ -83,7 +77,8 @@ html{background: #ebece7;}
 .tele span{color: red;font-weight: 600;}
 
 /*logo*/
-#logo{margin: 0 auto;padding-top:20px;background:#FDFDFD;width: 1200px;height: 90px;}
+#big_logo{height: 110px;background: url(../img/header_1.jpg) no-repeat 50%;}
+#logo{margin: 0 auto;padding-top:20px;width: 1200px;height: 90px;}
 .logo_left1{float: left;margin-right:10px;}
 .logo_left2{float: left;margin-right: 10px;}
 .logo_right1{float: left;margin-top:12px;}

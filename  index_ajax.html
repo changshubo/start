@@ -36,9 +36,6 @@
 					var zz=yy.length;
 					$(".qqqq").html(zz);
 				}
-				
-				
-				
 				$(".log_on").click(function(e){
 					//如果已经登录了，就不让他跳转了
 					if("thisName"==item[0]){
@@ -70,7 +67,7 @@
 		<!--左边鼠标划入的动画-->
 		<script>
 			$(window).ready(function(){
-				//当滚动条到某位置
+				//当滚动条到某位置  左边的侧栏出现
 				window.onscroll=function(){
 					var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
 					if(scrollTop<=1300){
@@ -78,7 +75,6 @@
 							display:"none"
 						})
 					}
-						
 					if(scrollTop>=1300&&scrollTop<=2500){
 						$("#side_left").css({
 							display:"block"
@@ -109,7 +105,6 @@
 						$(".F2_side").css({
 							background:"#AF0015"
 						})
-						
 					}
 					if(scrollTop>=3600 ){
 						$(".F1_side").html(null);
@@ -127,8 +122,7 @@
 					}
 				}
 				
-				
-				//当鼠标滑入时/
+				//当鼠标滑入时/，对应楼梯缓慢滑出
 				$(".F1_side").mouseenter(function(){
 					$(".F1_side").css({
 						background:"#9B1CEB"
@@ -195,12 +189,12 @@
 				})
 			})
 		</script>
-		
+	<!--整个网页右侧的内容，他总是在其他元素的上面-->
 		<div id="side_right">
-			
 			<div class="side_right1">
 				我
 			</div>
+			<!--这个刚开始为隐藏-->
 			<div class="div_wo">
 				<div class="div_wo1">
 					<p><a href="log_index.html" class="welcome_log">您好!请&nbsp;登录</a></p>
@@ -214,16 +208,20 @@
 					<a href="huiyuanCenter.html"><p>会员俱乐铺</p></a>
 				</div>
 			</div>
+			
 			<div class="side_right2">
 				收藏
 			</div>
+			<!--这个刚开始为隐藏-->
 			<div class="div_shoucang">
 				<p><a href="log_index.html" class="welcome_log">您好!请 &nbsp;登录</a></p>
 			</div>
+			
 			<div class="side_right3" isDisplay="ture">
 				购物车
 				
 			</div>
+			<!--这个刚开始为隐藏-->
 			<div class="div_gouwuche">
 				<div class="div1">
 					购物车
@@ -317,10 +315,12 @@
 					</li>
 					<li class="li33">
 						<a class="top_nav_phone" href="">_手机逛华致_</a>
+						<!--这个刚开始为隐藏-->
 						<div class="two_wei_ma1"><img width="78"  height="78" src="img/fxshangcheng.jpg"/></div>
 					</li>
 					<li class="li44">
 						<a class="top_nav_store" href="">分消商城</a>
+						<!--这个刚开始为隐藏-->
 						<div class="two_wei_ma2"><img width="78"  height="78" src="img/fxshangcheng.jpg"/></div>
 					</li>
 					
@@ -358,11 +358,9 @@
 		</div>
 	<!--logo-->
 	<div id="big_logo">
-		
-	
 		<div id="logo">
 			<div class="logo_left1">
-				<a href=""><img src="img/logo.png"/></a>
+				<a href="index.html"><img src="img/logo.png"/></a>
 			</div>
 			<div class="logo_left2">
 				<img src="img/1480058220415459342.gif">

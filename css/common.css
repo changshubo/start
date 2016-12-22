@@ -81,6 +81,7 @@ html{background: #ebece7;}
 .logo_right1{float: left;margin-top:12px;}
 .logo_right1 .ipt{width: 350px;height:40px;border:2px solid #e2000b;float: left;margin-bottom:9px;}
 .logo_right1 .search{width:60px;height:44px;background: #e2000b;border: 0;color:#fff;line-height: 44px;text-align: center;font-size: 16px;float:left;margin-bottom:9px;}
+
 .logo_nav li{float:left;}
 .logo_nav li a{float:left;padding:0 12px 0;border-right:1px solid #ac9e9b;color: #66675f;font-size:12px;}
 .logo_nav li a:hover{color: red;text-decoration: underline;}

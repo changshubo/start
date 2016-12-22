@@ -588,7 +588,7 @@
 				我的购物车
 			</h2>
 			<div class="shop_th">
-				<input type="checkbox" checked="checked" />
+				<input type="checkbox"  class="all_select"/>
 				<p class="p1">全选</p>
 				<p class="p2">商品</p>
 				<p>本店价</p>
@@ -598,7 +598,7 @@
 				
 			</div>
 			<div class="shop_list">
-				<input type="checkbox"  value="" checked="checked"/>
+				<input type="checkbox"  value=""  class="this_select"/>
 				<a href=""><img class="sp_img" src=""/></a>
 				<a href=""><span class="sp_name">喔喔偶我我无无无无无无</span></a>
 				<p class="sp_price">
@@ -626,7 +626,27 @@
 			</div>
 		</div>
 	</div>
-	
+	<!--全选功能的实现-->
+	<script type="text/javascript">
+		$(window).ready(function(){
+			var isAllSelect=true;
+			$(".all_select").click(function(){
+				if(isAllSelect){
+					if($(".all_select").attr("checked",true)){
+						$(".this_select").attr("checked",true)
+					}
+					isAllSelect=!isAllSelect;
+				}else{
+					if($(".all_select").attr("checked",false)){
+						$(".this_select").attr("checked",false)
+					}
+					isAllSelect=!isAllSelect;
+				}
+			})
+			
+		})
+			
+	</script>
 	<!--通过cookie获取数据-->
 	<script type="text/javascript">
 		$(window).ready(function(){
@@ -643,9 +663,9 @@
            		var arrCookie=strCookie.split("; ");
            	 	for(var i=0;i<arrCookie.length;i++){
                 var item=arrCookie[i].split("=");
-                if(item[0]==name){
-                    cookieValue=item[1];
-                }
+                	if(item[0]==name){
+                   	 	cookieValue=item[1];
+              	 	}
           		}
             return decodeURIComponent(cookieValue);
    			},
@@ -654,7 +674,7 @@
     		}
 		}
 			var strShopping=cookieUtil.getCookie("cookieshopping");
-//				$(".main_con").html(""); 清楚本页的东西
+//				$(".main_con").html(""); 清除本页的东西
 			if(strShopping.length>0){
 				var arrProduct=strShopping.split("||");
 				console.log(arrProduct.length);
